@@ -33,6 +33,11 @@ num_projects = input("Enter the number of projects you are worked on: ")
 num_coding_langs = input("Enter the number of coding languages known: ")
 num_grp_work = input("Enter the number work done by your group: ")
 
+firstProjectType = input("Enter the first project you want to add in your portfolio: ")
+secondProjectType = input("Enter the second project you want to add in your portfolio: ")
+thirdProjectType = input("Enter the third project you want to add in your portfolio: ")
+
+
 
 hobbies = input("Enter your hobbies: ")
 one_line_about = input("Write 2-3 lines about yourself: ")
@@ -147,7 +152,9 @@ html_content = html_content.replace('<li>bulletProf23</li>', f'<li>{bulletProf23
 html_content = html_content.replace('<li>bulletProf24</li>', f'<li>{bulletProf24}</li>')
 
 
-
+html_content = html_content.replace('firPort', firstProjectType)
+html_content = html_content.replace('secPort', secondProjectType)
+html_content = html_content.replace('thiPort', thirdProjectType)
 
 
 for i in range(8):  # Loop through each skill
