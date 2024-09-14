@@ -2,6 +2,14 @@
 name = input("Enter your name: ")
 age = input("Enter your age: ")
 dob = input("Enter your date of birth (dd-mm-yyyy): ")
+address = input("Enter your address: ")
+email = input("Enter your email: ")
+degree = input("Enter your highest degree: ")
+mobile_num = input("Enter your mobile number: ")
+
+
+
+
 role = input("Enter your role (2 words, comma-separated): ")
 
 periodProf1 = input("Enter the period for your first role: ")
@@ -20,14 +28,10 @@ commaSepSkill2 = role.split(",")[1]
 
 
 
-address = input("Enter your address: ")
-email = input("Enter your email: ")
-degree = input("Enter your highest degree: ")
-mobile_num = input("Enter your mobile number: ")
 
 
 
-cert_name = (input("Enter the name of the certificate: ") )
+cert_name = (input("Enter the name of the certificate you hav done the most: ") )
 num_certificates = int(input("Enter the number of certificates: "))
 num_projects = input("Enter the number of projects you are worked on: ")
 num_coding_langs = input("Enter the number of coding languages known: ")
@@ -46,7 +50,7 @@ facebook = input("Enter your Facebook link (or type 'no' if none): ")
 instagram = input("Enter your Instagram link (or type 'no' if none): ")
 github = input("Enter your GitHub link (or type 'no' if none): ")
 linkedin = input("Enter your LinkedIn link (or type 'no' if none): ")
-location_link = input("Enter your location link: ")
+location = input("Enter your location link: ")
 about_more = input("Write more about yourself: ")
 
 
@@ -90,7 +94,7 @@ for i in range(1, 9):
     
 
 # Step 1: Modify the index.html file
-with open("bp.html", "r") as file:
+with open("index.html", "r") as file:
     html_content = file.read()
 
 # Replacing the placeholders in index.html with user input
@@ -161,6 +165,8 @@ html_content = html_content.replace('thiPort', thirdProjectType)
 html_content = html_content.replace('<p>addCon</p>', f'<p>{address}</p>')
 html_content = html_content.replace('<p>mobCon</p>', f'<p>{mobile_num}</p>')
 html_content = html_content.replace('<p>emailCon</p>', f'<p>{email}</p>')
+html_content = html_content.replace('<strong class="px-1 sitename">userName portfolio</strong>', f'<strong class="px-1 sitename">{name} portfolio</strong>')
+html_content = html_content.replace('<!--mapLink-->', location)
 
 
 for i in range(8):  # Loop through each skill
@@ -180,8 +186,8 @@ for i in range(8):  # Loop through each skill
 
 
 # Writing the modified content back to index.html
-with open("bp.html", "w") as file:
-    file.write(html_content)
+# with open(".html", "w") as file:
+#     file.write(html_content)
 
 # Step 2: Creating a new HTML file based on the user's name
 file_name = f"{name.lower()}'s portfolio.html"
