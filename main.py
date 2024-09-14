@@ -157,6 +157,12 @@ html_content = html_content.replace('secPort', secondProjectType)
 html_content = html_content.replace('thiPort', thirdProjectType)
 
 
+
+html_content = html_content.replace('<p>addCon</p>', f'<p>{address}</p>')
+html_content = html_content.replace('<p>mobCon</p>', f'<p>{mobile_num}</p>')
+html_content = html_content.replace('<p>emailCon</p>', f'<p>{email}</p>')
+
+
 for i in range(8):  # Loop through each skill
     skill_name = skills[i]
     skill_level = levels[i]
