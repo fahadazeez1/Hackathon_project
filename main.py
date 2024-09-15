@@ -1,4 +1,4 @@
-# Taking user inputs
+#shorts input
 name = input("Enter your name: ")
 age = input("Enter your age: ")
 dob = input("Enter your date of birth (dd-mm-yyyy): ")
@@ -6,7 +6,7 @@ address = input("Enter your address: ")
 email = input("Enter your email: ")
 degree = input("Enter your highest degree: ")
 mobile_num = input("Enter your mobile number: ")
-hobbies = input("Enter your hobbies: ")
+hobbies = input("Enter your hobbies : ")
 
 
 
@@ -39,7 +39,7 @@ num_certificates = int(input("Enter the number of certificates: "))
 num_projects = input("Enter the number of projects you are worked on: ")
 num_coding_langs = input("Enter the number of coding languages known: ")
 num_grp_work = input("Enter the number work done by your group: ")
-#ss
+
 firstProjectType = input("Enter the first project you want to add in your portfolio: ")
 secondProjectType = input("Enter the second project you want to add in your portfolio: ")
 thirdProjectType = input("Enter the third project you want to add in your portfolio: ")
@@ -48,7 +48,7 @@ thirdProjectType = input("Enter the third project you want to add in your portfo
 
 heading_about = input("Enter a one-line heading for 'About': ")
 one_line_about = input("Write 2-3 lines about yourself: ")
-about_more = input("Write more about yourself: ")
+# about_more = input("Write more about yourself: ")
 summary = input("Write a detailed summary about yourself: ")
 
 facebook = input("Enter your Facebook link (or type 'no' if none): ")
@@ -62,13 +62,13 @@ location = input("Enter your location link: ")
 
 schoolName=input("Write your school name from where you complete your Matriculation and Intermediate Education ")
 schoolYear=input("Enter the year for your Matriculation and Intermediate Education: ")
-schoolJourney=input("Write about your education journey: ")
+schoolJourney=input("Write about your Matriculation and Intermediate education journey: ")
 
 collegeName=input("Write your college name from where you complete/parsue your higher Education ")
 education_year = input("Enter the year for your education journey: ")
 education_journey = input("Write about your Higher Education journey: ")
 
-professional_experience = input("Describe your professional experience: ")
+# professional_experience = input("Describe your professional experience: ")
 professional_year = input("Enter the year of your professional experience: ")
 
 # if links are not availbale put # at the place of the link
@@ -168,7 +168,9 @@ html_content = html_content.replace('thiPort', thirdProjectType)
 html_content = html_content.replace('<p>addCon</p>', f'<p>{address}</p>')
 html_content = html_content.replace('<p>mobCon</p>', f'<p>{mobile_num}</p>')
 html_content = html_content.replace('<p>emailCon</p>', f'<p>{email}</p>')
-html_content = html_content.replace('<strong class="px-1 sitename">userName portfolio</strong>', f'<strong class="px-1 sitename">{name} portfolio</strong>')
+html_content = html_content.replace('<strong class="px-1 sitename">userName\'s portfolio</strong>', f'<strong class="px-1 sitename">{name}\'s portfolio</strong>')
+
+# html_content = html_content.replace('<strong class="px-1 sitename">userName portfolio</strong>', f'<strong class="px-1 sitename">{name} portfolio</strong>')
 html_content = html_content.replace('<!--mapLink-->', location)
 
 
@@ -188,11 +190,7 @@ for i in range(8):  # Loop through each skill
                                         f'<div class="progress-bar" role="progressbar" aria-valuenow="{skill_level}" aria-valuemin="0" aria-valuemax="100"></div>')
 
 
-# Writing the modified content back to index.html
-# with open(".html", "w") as file:
-#     file.write(html_content)
 
-# Step 2: Creating a new HTML file based on the user's name
 file_name = f"{name.lower()}'s portfolio.html"
 
 # Writing the modified content to the new file
