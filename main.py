@@ -6,7 +6,7 @@ address = input("Enter your address: ")
 email = input("Enter your email: ")
 degree = input("Enter your highest degree: ")
 mobile_num = input("Enter your mobile number: ")
-
+hobbies = input("Enter your hobbies: ")
 
 
 
@@ -31,44 +31,47 @@ commaSepSkill2 = role.split(",")[1]
 
 
 
-cert_name = (input("Enter the name of the certificate you hav done the most: ") )
+cert_name = (input("Enter the name of the certificate you have done the most: ") )
 num_certificates = int(input("Enter the number of certificates: "))
+
+
+
 num_projects = input("Enter the number of projects you are worked on: ")
 num_coding_langs = input("Enter the number of coding languages known: ")
 num_grp_work = input("Enter the number work done by your group: ")
-
+#ss
 firstProjectType = input("Enter the first project you want to add in your portfolio: ")
 secondProjectType = input("Enter the second project you want to add in your portfolio: ")
 thirdProjectType = input("Enter the third project you want to add in your portfolio: ")
 
 
 
-hobbies = input("Enter your hobbies: ")
-one_line_about = input("Write 2-3 lines about yourself: ")
 heading_about = input("Enter a one-line heading for 'About': ")
+one_line_about = input("Write 2-3 lines about yourself: ")
+about_more = input("Write more about yourself: ")
+summary = input("Write a detailed summary about yourself: ")
+
 facebook = input("Enter your Facebook link (or type 'no' if none): ")
 instagram = input("Enter your Instagram link (or type 'no' if none): ")
 github = input("Enter your GitHub link (or type 'no' if none): ")
 linkedin = input("Enter your LinkedIn link (or type 'no' if none): ")
 location = input("Enter your location link: ")
-about_more = input("Write more about yourself: ")
 
 
-summary = input("Write a detailed summary about yourself: ")
+
+
 schoolName=input("Write your school name from where you complete your Matriculation and Intermediate Education ")
 schoolYear=input("Enter the year for your Matriculation and Intermediate Education: ")
 schoolJourney=input("Write about your education journey: ")
+
 collegeName=input("Write your college name from where you complete/parsue your higher Education ")
 education_year = input("Enter the year for your education journey: ")
 education_journey = input("Write about your Higher Education journey: ")
 
 professional_experience = input("Describe your professional experience: ")
 professional_year = input("Enter the year of your professional experience: ")
-bullet1 = input("Enter main bullet point 1 for your experience: ")
-bullet2 = input("Enter main bullet point 2 for your experience: ")
-bullet3 = input("Enter main bullet point 3 for your experience: ")
 
-# Creating fallbacks for social media links
+# if links are not availbale put # at the place of the link
 facebook_link = facebook if facebook != "no" else "#"
 instagram_link = instagram if instagram != "no" else "#"
 github_link = github if github != "no" else "#"
