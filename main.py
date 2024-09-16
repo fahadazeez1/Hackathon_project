@@ -71,7 +71,7 @@ education_journey = input("Write about your Higher Education journey: ")
 # professional_experience = input("Describe your professional experience: ")
 professional_year = input("Enter the year of your professional experience: ")
 
-# if links are not availbale put # at the place of the link
+# if links are not availbale put # at the place of the link 
 facebook_link = facebook if facebook != "no" else "#"
 instagram_link = instagram if instagram != "no" else "#"
 github_link = github if github != "no" else "#"
