@@ -39,18 +39,12 @@ num_projectss = input("Enter the number of projects you are worked on: ")
 num_coding_langs = input("Enter the number of coding languages known: ")
 num_grp_work = input("Enter the number work done by your group: ")
 
-# firstProjectType = input("Enter the first project you want to add in your portfolio: ")
-# secondProjectType = input("Enter the second project you want to add in your portfolio: ")
-# thirdProjectType = input("Enter the third project you want to add in your portfolio: ")
-
 
 
 heading_about = input("Enter a one-line heading for 'About': ")
 one_line_about = input("Write 2-3 lines about yourself: ")
-# about_more = input("Write more about yourself: ")
 summary = input("Write a detailed summary about yourself: ")
 
-# facebook = input("Enter your Facebook link (or type 'no' if none): ")
 location = input("Enter your location link: ")
 
 
@@ -246,29 +240,7 @@ for placeholder, replacement in zip(placeholders2, replacements2):
 
 
 
-# ----------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# ---------------------------------------------------------------------------
 # Replacing the placeholders in updated_index.html with user input
 html_content = html_content.replace("<title>yourTitle</title>", f"<title>{name}'s Portfolio</title>")
 html_content = html_content.replace('<h1 class="sitename">yourName</h1>', f'<h1 class="sitename">{name}</h1>')
@@ -324,9 +296,7 @@ html_content = html_content.replace('<li>bulletProf23</li>', f'<li>{bulletProf23
 html_content = html_content.replace('<li>bulletProf24</li>', f'<li>{bulletProf24}</li>')
 
 
-# html_content = html_content.replace('firPort', firstProjectType)
-# html_content = html_content.replace('secPort', secondProjectType)
-# html_content = html_content.replace('thiPort', thirdProjectType)
+
 
 
 
@@ -337,11 +307,6 @@ html_content = html_content.replace('<strong class="px-1 sitename">userName\'s p
 
 # html_content = html_content.replace('<strong class="px-1 sitename">userName portfolio</strong>', f'<strong class="px-1 sitename">{name} portfolio</strong>')
 html_content = html_content.replace('<!--mapLink-->', location)
-
-
-
-
-
 
 
 for i in range(num_skills):
