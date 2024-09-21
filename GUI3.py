@@ -32,7 +32,7 @@ class ScrollableFrame(ttk.Frame):
         self.grid_columnconfigure(0, weight=1)
 
         # Set a minimum size for the canvas to improve visibility
-        self.canvas.config(width=1000, height=600)  # Adjust dimensions as neededs
+        self.canvas.config(width=1200, height=600)  # Adjust dimensions as neededs
 # Create the main application window
 root = tk.Tk()
 root.title("Form with Scrollbar using Grid")
@@ -51,7 +51,7 @@ h11.grid(row=0, column=0,columnspan=7,sticky="nsew")
 
 #**************************************personal
 
-h12 = tk.Label(scrollable_container.scrollable_frame, text="Personal details", padx=10, pady=5,font=("arial",15))
+h12 = tk.Label(scrollable_container.scrollable_frame, text="-------------------------------------Personal details-----------------------------------", padx=10, pady=5,font=("arial",15))
 h12.grid(row=1, column=0,columnspan=7,sticky="nsew")
 
 
@@ -109,7 +109,7 @@ abouts.grid(row=4, column=4, padx=10, pady=15)
 
 
 #********************************************education
-h13 = tk.Label(scrollable_container.scrollable_frame, text="Educational Details", padx=10, pady=15,font=("arial",15))
+h13 = tk.Label(scrollable_container.scrollable_frame, text="-------------------------------Educational Details-----------------------------", padx=10, pady=15,font=("arial",15))
 h13.grid(row=5, column=0,columnspan=7,sticky="nsew")
 
 
@@ -148,7 +148,7 @@ education_journeys.grid(row=7,column=6,padx=10,pady=15)
 
 #*******************************************************LINKS
 
-h14 = tk.Label(scrollable_container.scrollable_frame, text="Social Media Link", padx=10, pady=15,font=("arial",15))
+h14 = tk.Label(scrollable_container.scrollable_frame, text="--------------------------------Social Media Link----------------------------", padx=10, pady=15,font=("arial",15))
 h14.grid(row=8, column=0,columnspan=7,sticky="nsew")
 
 
@@ -177,6 +177,72 @@ lab241 = tk.Label(scrollable_container.scrollable_frame, text="Location link", p
 lab241.grid(row=10, column=3, sticky="w")
 location_links = tk.Entry(scrollable_container.scrollable_frame)
 location_links.grid(row=10, column=4, padx=10, pady=15)
+
+#****************************************************professional details
+h15 = tk.Label(scrollable_container.scrollable_frame, text="--------------------------Professional Summary------------------------", padx=10, pady=15,font=("arial",15))
+h15.grid(row=11, column=0,columnspan=7,sticky="nsew")
+
+
+lab10 = tk.Label(scrollable_container.scrollable_frame, text="Role (comma separated)", padx=10, pady=15)
+lab10.grid(row=12, column=0, sticky="w")
+roles = tk.Entry(scrollable_container.scrollable_frame)
+roles.grid(row=12, column=1, padx=10, pady=15)
+
+lab11 = tk.Label(scrollable_container.scrollable_frame, text="period of your first role", padx=10, pady=15)
+lab11.grid(row=12, column=3, sticky="w")
+periodProf1s = tk.Entry(scrollable_container.scrollable_frame)
+periodProf1s.grid(row=12, column=4, padx=10, pady=15)
+
+lab16 = tk.Label(scrollable_container.scrollable_frame, text="period of your first role", padx=10, pady=15)
+lab16.grid(row=12, column=5, sticky="w")
+periodProf2s = tk.Entry(scrollable_container.scrollable_frame)
+periodProf2s.grid(row=12, column=6, padx=10, pady=15)
+
+
+
+lab12 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 1", padx=10, pady=15)
+lab12.grid(row=13, column=0, sticky="w")
+bulletProf11s = tk.Entry(scrollable_container.scrollable_frame)
+bulletProf11s.grid(row=13, column=1, padx=10, pady=15)
+
+lab13 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 1", padx=10, pady=15)
+lab13.grid(row=13, column=3, sticky="w")
+bulletProf12s = tk.Entry(scrollable_container.scrollable_frame)
+bulletProf12s.grid(row=13, column=4, padx=10, pady=15)
+
+lab14 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 1", padx=10, pady=5)
+lab14.grid(row=13, column=5, sticky="w")
+bulletProf13s = tk.Entry(scrollable_container.scrollable_frame)
+bulletProf13s.grid(row=13, column=6, padx=10, pady=5)
+
+lab15 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 1", padx=10, pady=15)
+lab15.grid(row=14, column=0, sticky="w")
+bulletProf14s = tk.Entry(scrollable_container.scrollable_frame)
+bulletProf14s.grid(row=14, column=1, padx=10, pady=15)
+
+
+
+lab17 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 2", padx=10, pady=15)
+lab17.grid(row=14, column=3, sticky="w")
+bulletProf21s = tk.Entry(scrollable_container.scrollable_frame)
+bulletProf21s.grid(row=14, column=4, padx=10, pady=15)
+
+lab18 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 2", padx=10, pady=15)
+lab18.grid(row=14, column=5, sticky="w")
+bulletProf22s = tk.Entry(scrollable_container.scrollable_frame)
+bulletProf22s.grid(row=14, column=6, padx=10, pady=15)
+
+lab19 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 2", padx=10, pady=15)
+lab19.grid(row=15, column=0, sticky="w")
+bulletProf23s = tk.Entry(scrollable_container.scrollable_frame)
+bulletProf23s.grid(row=15, column=1, padx=10, pady=15)
+
+lab20 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 2", padx=10, pady=5)
+lab20.grid(row=15, column=3, sticky="w")
+bulletProf24s = tk.Entry(scrollable_container.scrollable_frame)
+bulletProf24s.grid(row=15, column=4, padx=10, pady=15)
+
+
 
 
 
