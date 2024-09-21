@@ -32,7 +32,7 @@ class ScrollableFrame(ttk.Frame):
         self.grid_columnconfigure(0, weight=1)
 
         # Set a minimum size for the canvas to improve visibility
-        self.canvas.config(width=1000, height=600)  # Adjust dimensions as neededs
+        self.canvas.config(width=700, height=600)  # Adjust dimensions as neededs
 # Create the main application window
 root = tk.Tk()
 root.title("Form with Scrollbar using Grid")
@@ -41,13 +41,17 @@ root.geometry("600x600")  # Increased height for more space
 # Add the scrollable frame
 scrollable_container = ScrollableFrame(root)
 scrollable_container.grid(row=0, column=0, sticky="nsew")
+h11 = tk.Label(scrollable_container.scrollable_frame, text="ENTER DETAILS,GET PORTFOLIO", padx=10, pady=5,font=("arial",20,"bold"))
+h11.grid(row=0, column=0,columnspan=7,sticky="nsew")
+
 
 #_______________________________________________________________________________________
 
 
-h11 = tk.Label(scrollable_container.scrollable_frame, text="ENTER DETAILS,GET PORTFOLIO", padx=10, pady=5,font=("arial",20,"bold"))
-h11.grid(row=0, column=0,columnspan=7,sticky="nsew")
-h12 = tk.Label(scrollable_container.scrollable_frame, text="personal details", padx=10, pady=5,font=("arial",15))
+
+#**************************************personal
+
+h12 = tk.Label(scrollable_container.scrollable_frame, text="Personal details", padx=10, pady=5,font=("arial",15))
 h12.grid(row=1, column=0,columnspan=7,sticky="nsew")
 
 
@@ -99,6 +103,56 @@ lab71 = tk.Label(scrollable_container.scrollable_frame, text="Hobbies", padx=10,
 lab71.grid(row=4, column=3, sticky="w")
 abouts = tk.Entry(scrollable_container.scrollable_frame)
 abouts.grid(row=4, column=4, padx=10, pady=15)
+
+
+
+
+
+#********************************************education
+h13 = tk.Label(scrollable_container.scrollable_frame, text="Educational Details", padx=10, pady=5,font=("arial",15))
+h13.grid(row=5, column=0,columnspan=7,sticky="nsew")
+
+
+lab8 = tk.Label(scrollable_container.scrollable_frame, text="School Name", padx=10, pady=15)
+lab8.grid(row=6, column=0, sticky="w")
+schoolNames = tk.Entry(scrollable_container.scrollable_frame)
+schoolNames.grid(row=6, column=1, padx=10, pady=15)
+
+lab29=tk.Label(scrollable_container.scrollable_frame,text="Passout Year",padx=10,pady=15)
+lab29.grid(row=6,column=3,sticky="w")
+schoolYears=tk.Entry(scrollable_container.scrollable_frame)
+schoolYears.grid(row=6,column=4,padx=10,pady=15)
+
+lab31=tk.Label(scrollable_container.scrollable_frame,text="Journey",padx=10,pady=15)
+lab31.grid(row=6,column=5,sticky="w")
+schoolJourneys=tk.Entry(scrollable_container.scrollable_frame)
+schoolJourneys.grid(row=6,column=6,padx=10,pady=15)
+
+
+lab9 = tk.Label(scrollable_container.scrollable_frame, text="College Name", padx=10, pady=15)
+lab9.grid(row=7, column=0, sticky="w")
+collegeNames = tk.Entry(scrollable_container.scrollable_frame)
+collegeNames.grid(row=7, column=1, padx=10, pady=15)
+
+lab30=tk.Label(scrollable_container.scrollable_frame,text="Passout Year",padx=10,pady=15)
+lab30.grid(row=7,column=3,sticky="w")
+education_years=tk.Entry(scrollable_container.scrollable_frame)
+education_years.grid(row=7,column=4,padx=10,pady=15)
+
+lab32=tk.Label(scrollable_container.scrollable_frame,text="Journey",padx=10,pady=15)
+lab32.grid(row=7,column=5,sticky="w")
+education_journeys=tk.Entry(scrollable_container.scrollable_frame)
+education_journeys.grid(row=7,column=6,padx=10,pady=15)
+
+
+
+
+
+
+
+
+
+
 
 
 
