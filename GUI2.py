@@ -1,15 +1,5 @@
 import tkinter as tk
 from tkinter import ttk
-
-# class ScrollableFrame(ttk.Frame):
-#     def __init__(self, container, *args, **kwargs):
-#         super().__init__(container, *args, **kwargs)
-        
-#         # Create a canvas and attach a vertical scrollbar
-#         # canvas = tk.Canvas(self, width=900, height=1000)  
-#         self.canvas = tk.Canvas(self)
-#         self.scrollbar = ttk.Scrollbar(self, orient="vertical", command=self.canvas.yview)
-#         self.scrollable_frame = ttk.Frame(self.canvas)
 class ScrollableFrame(ttk.Frame):
     def __init__(self, container, *args, **kwargs):
         super().__init__(container, *args, **kwargs)
@@ -53,31 +43,6 @@ scrollable_container = ScrollableFrame(root)
 scrollable_container.grid(row=0, column=0, sticky="nsew")
 
 # Add your specified input fields to the scrollable frame using grid
-# fields = [
-#     ("Enter your name", 0), ("Enter your Age", 1), ("Enter your DOB", 2),
-#     ("Enter your Address", 3), ("Enter your Mobile number", 4), ("Enter your mail", 5),
-#     ("Enter your hobbies", 6), ("Enter your school name", 7),
-#     ("Enter your college name", 8), ("Enter your Role (comma separated)", 9),
-#     ("Enter the period of your first role", 10), ("Enter the 1st bullet point for the first role", 11),
-#     ("Enter the 2nd bullet point for the first role", 12), ("Enter the 3rd bullet point for the first role", 13),
-#     ("Enter the 4th bullet point for the first role", 14), ("Enter the period of your second role", 15),
-#     ("Enter the 1st bullet point for the second role", 16), ("Enter the 2nd bullet point for the second role", 17),
-#     ("Enter the 3rd bullet for the second role", 18), ("Enter the 4th bullet point for the second role", 19),
-#     ("Enter Facebook link (type no to skip)", 20),
-#     ("Enter Github link (type no to skip)", 21), ("Enter Linkedin link (type no to skip)", 22),
-#     ("Enter Instagram link (type no to skip)", 23),
-#     ("Write the certificate name you have done the most", 24), ("Enter the number of these certificates", 24),
-#     ("Number of projects you have created", 25), ("Number of languages you know", 26),
-#     ("Enter your lower education passout year", 27), ("Enter your higher education passout year", 28),
-#     ("Write about your lower education journey", 29),("explain the row 30",30)
-# ]
-
-# for label_text, row in fields:
-#     label = ttk.Label(scrollable_container.scrollable_frame, text=label_text, padding=10)
-#     label.grid(row=row, column=0, sticky="w")
-#     entry = ttk.Entry(scrollable_container.scrollable_frame)
-#     entry.grid(row=row, column=1, padx=10, pady=5)
-
 
 lab1 = tk.Label(scrollable_container.scrollable_frame, text="Enter your name", padx=10, pady=5)
 lab1.grid(row=0, column=0, sticky="w")
@@ -181,61 +146,140 @@ bulletProf24s.grid(row=19, column=1, padx=10, pady=5)
 
 lab21 = tk.Label(scrollable_container.scrollable_frame, text="Enter Facebook link (type no to skip)", padx=10, pady=5)
 lab21.grid(row=20, column=0, sticky="w")
-facebookEntry = tk.Entry(scrollable_container.scrollable_frame)
-facebookEntry.grid(row=20, column=1, padx=10, pady=5)
+facebook_links = tk.Entry(scrollable_container.scrollable_frame)
+facebook_links.grid(row=20, column=1, padx=10, pady=5)
 
 lab22 = tk.Label(scrollable_container.scrollable_frame, text="Enter Github link (type no to skip)", padx=10, pady=5)
 lab22.grid(row=21, column=0, sticky="w")
-githubEntry = tk.Entry(scrollable_container.scrollable_frame)
-githubEntry.grid(row=21, column=1, padx=10, pady=5)
+github_links = tk.Entry(scrollable_container.scrollable_frame)
+github_links.grid(row=21, column=1, padx=10, pady=5)
 
 lab23 = tk.Label(scrollable_container.scrollable_frame, text="Enter Linkedin link (type no to skip)", padx=10, pady=5)
 lab23.grid(row=22, column=0, sticky="w")
-linkedinEntry = tk.Entry(scrollable_container.scrollable_frame)
-linkedinEntry.grid(row=22, column=1, padx=10, pady=5)
+linkedin_links = tk.Entry(scrollable_container.scrollable_frame)
+linkedin_links.grid(row=22, column=1, padx=10, pady=5)
 
 lab24 = tk.Label(scrollable_container.scrollable_frame, text="Enter Instagram link (type no to skip)", padx=10, pady=5)
 lab24.grid(row=23, column=0, sticky="w")
-instagramEntry = tk.Entry(scrollable_container.scrollable_frame)
-instagramEntry.grid(row=23, column=1, padx=10, pady=5)
+instagram_links = tk.Entry(scrollable_container.scrollable_frame)
+instagram_links.grid(row=23, column=1, padx=10, pady=5)
 
 lab25 = tk.Label(scrollable_container.scrollable_frame, text="Write the certificate name you have done the most", padx=10, pady=5)
 lab25.grid(row=24, column=0, sticky="w")
-certificateEntry = tk.Entry(scrollable_container.scrollable_frame)
-certificateEntry.grid(row=24, column=1, padx=10, pady=5)
+cert_names = tk.Entry(scrollable_container.scrollable_frame)
+cert_names.grid(row=24, column=1, padx=10, pady=5)
 
 lab26 = tk.Label(scrollable_container.scrollable_frame, text="Enter the number of these certificates", padx=10, pady=5)
 lab26.grid(row=25, column=0, sticky="w")
-numCertificatesEntry = tk.Entry(scrollable_container.scrollable_frame)
-numCertificatesEntry.grid(row=25, column=1, padx=10, pady=5)
+num_certificatess = tk.Entry(scrollable_container.scrollable_frame)
+num_certificatess.grid(row=25, column=1, padx=10, pady=5)
 
 lab27 = tk.Label(scrollable_container.scrollable_frame, text="Number of projectsyou have done", padx=10, pady=5)
 lab27.grid(row=26, column=0, sticky="w")
-numProjectsEntry = tk.Entry(scrollable_container.scrollable_frame)
-numProjectsEntry.grid(row=26, column=1, padx=10, pady=5)
+num_projectss = tk.Entry(scrollable_container.scrollable_frame)
+num_projectss.grid(row=26, column=1, padx=10, pady=5)
 
-lab28 = tk.Label(scrollable_container.scrollable_frame, text="Any other skills you have", padx=10, pady=5)
-lab28.grid(row=27, column=0, sticky="w")
-otherSkillsEntry = tk.Entry(scrollable_container.scrollable_frame)
-otherSkillsEntry.grid(row=27, column=1, padx=10, pady=5)
-
-lab29 = tk.Label(scrollable_container.scrollable_frame, text="Any other achievements you have", padx=10, pady=5)
-lab29.grid(row=28, column=0, sticky="w")
-achievementsEntry = tk.Entry(scrollable_container.scrollable_frame)
-achievementsEntry.grid(row=28, column=1, padx=10, pady=5)
-
-lab30 = tk.Label(scrollable_container.scrollable_frame, text="Your profile image", padx=10, pady=5)
-lab30.grid(row=0, column=4, sticky="w")
-imageEntry = tk.Entry(scrollable_container.scrollable_frame)
-imageEntry.grid(row=0, column=5, padx=10, pady=5)
-
-lab31 = tk.Label(scrollable_container.scrollable_frame, text="Enter your portfolio title", padx=10, pady=5)
-lab31.grid(row=0, column=2, sticky="w")
-portfolioTitleEntry = tk.Entry(scrollable_container.scrollable_frame)
-portfolioTitleEntry.grid(row=0, column=3, padx=10, pady=5)
+lab28=tk.Label(scrollable_container.scrollable_frame,text="enter the umber of coding ",padx=10,pady=5).grid(row=27,column=0)
+num_coding_langss=tk.Entry(scrollable_container.scrollable_frame)
+num_coding_langss.grid(row=27,column=1,padx=10,pady=5)
 
 
-# Start the main loop
+
+lab29=tk.Label(scrollable_container.scrollable_frame,text="entr the year of lower edu passyear",padx=10,pady=5).grid(row=28,column=0)
+schoolYears=tk.Entry(scrollable_container.scrollable_frame)
+schoolYears.grid(row=28,column=1,padx=10,pady=5)
+
+lab30=tk.Label(scrollable_container.scrollable_frame,text="entr the year of higher edu passyear",padx=10,pady=5).grid(row=29,column=0)
+education_years=tk.Entry(scrollable_container.scrollable_frame)
+education_years.grid(row=29,column=1,padx=10,pady=5)
+
+lab31=tk.Label(scrollable_container.scrollable_frame,text="entr lower sch journey",padx=10,pady=5).grid(row=30,column=0)
+schoolJourneys=tk.Entry(scrollable_container.scrollable_frame)
+schoolJourneys.grid(row=30,column=1,padx=10,pady=5)
+
+lab32=tk.Label(scrollable_container.scrollable_frame,text="entr lower higher journey",padx=10,pady=5).grid(row=31,column=0)
+education_journeys=tk.Entry(scrollable_container.scrollable_frame)
+education_journeys.grid(row=31,column=1,padx=10,pady=5)
+
+
+lab33=tk.Label(scrollable_container.scrollable_frame,text="entr num of skill",padx=10,pady=5).grid(row=32,column=0)
+num_skillss=tk.Entry(scrollable_container.scrollable_frame)
+num_skillss.grid(row=32,column=1,padx=10,pady=5)
+
+
+lab34=tk.Label(scrollable_container.scrollable_frame,text="entr name of skill 1",padx=10,pady=5).grid(row=33,column=0)
+s1names=tk.Entry(scrollable_container.scrollable_frame)
+s1names.grid(row=33,column=1,padx=10,pady=5)
+lab35=tk.Label(scrollable_container.scrollable_frame,text="entr level of skill 1",padx=10,pady=5).grid(row=34,column=0)
+s1vals=tk.Entry(scrollable_container.scrollable_frame)
+s1vals.grid(row=34,column=1,padx=10,pady=5)
+
+lab36=tk.Label(scrollable_container.scrollable_frame,text="entr name of skill 2",padx=10,pady=5).grid(row=35,column=0)
+s2names=tk.Entry(scrollable_container.scrollable_frame)
+s2names.grid(row=35,column=1,padx=10,pady=5)
+lab37=tk.Label(scrollable_container.scrollable_frame,text="entr level of skill 2",padx=10,pady=5).grid(row=36,column=0)
+s2vals=tk.Entry(scrollable_container.scrollable_frame)
+s2vals.grid(row=36,column=1,padx=10,pady=5)
+
+lab38=tk.Label(scrollable_container.scrollable_frame,text="entr name of skill 3",padx=10,pady=5).grid(row=37,column=0)
+s3names=tk.Entry(scrollable_container.scrollable_frame)
+s3names.grid(row=37,column=1,padx=10,pady=5)
+lab39=tk.Label(scrollable_container.scrollable_frame,text="entr level of skill 3",padx=10,pady=5).grid(row=38,column=0)
+s3vals=tk.Entry(scrollable_container.scrollable_frame)
+s3vals.grid(row=38,column=1,padx=10,pady=5)
+
+
+lab40=tk.Label(scrollable_container.scrollable_frame,text="entr name of skill 4",padx=10,pady=5).grid(row=39,column=0)
+s4names=tk.Entry(scrollable_container.scrollable_frame)
+s4names.grid(row=39,column=1,padx=10,pady=5)
+lab41=tk.Label(scrollable_container.scrollable_frame,text="entr level of skill 4",padx=10,pady=5).grid(row=40,column=0)
+s4vals=tk.Entry(scrollable_container.scrollable_frame)
+s4vals.grid(row=40,column=1,padx=10,pady=5)
+
+lab42=tk.Label(scrollable_container.scrollable_frame,text="entr name of skill 5",padx=10,pady=5).grid(row=41,column=0)
+s5names=tk.Entry(scrollable_container.scrollable_frame)
+s5names.grid(row=41,column=1,padx=10,pady=5)
+lab43=tk.Label(scrollable_container.scrollable_frame,text="entr level of skill 5",padx=10,pady=5).grid(row=42,column=0)
+s5vals=tk.Entry(scrollable_container.scrollable_frame)
+s5vals.grid(row=42,column=1,padx=10,pady=5)
+
+lab44=tk.Label(scrollable_container.scrollable_frame,text="entr name of skill 6",padx=10,pady=5).grid(row=43,column=0)
+s6names=tk.Entry(scrollable_container.scrollable_frame)
+s6names.grid(row=43,column=1,padx=10,pady=5)
+lab45=tk.Label(scrollable_container.scrollable_frame,text="entr level of skill 6",padx=10,pady=5).grid(row=44,column=0)
+s6vals=tk.Entry(scrollable_container.scrollable_frame)
+s6vals.grid(row=44,column=1,padx=10,pady=5)
+
+lab46=tk.Label(scrollable_container.scrollable_frame,text="entr name of skill 7",padx=10,pady=5).grid(row=45,column=0)
+s7names=tk.Entry(scrollable_container.scrollable_frame)
+s7names.grid(row=45,column=1,padx=10,pady=5)
+lab47=tk.Label(scrollable_container.scrollable_frame,text="entr level of skill 7",padx=10,pady=5).grid(row=46,column=0)
+s7vals=tk.Entry(scrollable_container.scrollable_frame)
+s7vals.grid(row=46,column=1,padx=10,pady=5)
+
+lab48=tk.Label(scrollable_container.scrollable_frame,text="entr name of skill 8",padx=10,pady=5).grid(row=47,column=0)
+s8names=tk.Entry(scrollable_container.scrollable_frame)
+s8names.grid(row=47,column=1,padx=10,pady=5)
+lab49=tk.Label(scrollable_container.scrollable_frame,text="entr level of skill 8",padx=10,pady=5).grid(row=48,column=0)
+s8vals=tk.Entry(scrollable_container.scrollable_frame)
+s8vals.grid(row=48,column=1,padx=10,pady=5)
+
+
+
+lab50=tk.Label(scrollable_container.scrollable_frame,text="Enter the project name 1 (if any)",padx=10,pady=5).grid(row=49,column=0)
+pro1names=tk.Entry(scrollable_container.scrollable_frame)
+pro1names.grid(row=49,column=1,padx=10,pady=5)
+
+lab51=tk.Label(scrollable_container.scrollable_frame,text="Enter the project name 2 (if any)",padx=10,pady=5).grid(row=50,column=0)
+pro2names=tk.Entry(scrollable_container.scrollable_frame)
+pro2names.grid(row=50,column=1,padx=10,pady=5)
+
+lab52=tk.Label(scrollable_container.scrollable_frame,text="Enter the project name 3 (if any)",padx=10,pady=5).grid(row=51,column=0)
+pro3names=tk.Entry(scrollable_container.scrollable_frame)
+pro3names.grid(row=51,column=1,padx=10,pady=5)
+
+
+
 def repl():
     e=names.get()
     r=ages.get()
@@ -243,5 +287,5 @@ def repl():
     print(e)
     print(r)
     print(t)
-btn=ttk.Button(scrollable_container.scrollable_frame,command=repl,text="click").grid(row=32,column=0)
+btn=ttk.Button(scrollable_container.scrollable_frame,command=repl,text="click").grid(row=55,column=0)
 root.mainloop()
