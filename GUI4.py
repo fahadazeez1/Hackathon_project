@@ -32,7 +32,7 @@ class ScrollableFrame(ttk.Frame):
         self.grid_columnconfigure(0, weight=1)
 
         # Set a minimum size for the canvas to improve visibility
-        self.canvas.config(width=1200, height=600)  # Adjust dimensions as neededs
+        self.canvas.config(width=1050, height=600)  # Adjust dimensions as neededs
 # Create the main application window
 root = tk.Tk()
 root.title("Form with Scrollbar using Grid")
@@ -332,11 +332,43 @@ s8vals=tk.Entry(scrollable_container.scrollable_frame)
 s8vals.grid(row=24,column=4,padx=10,pady=15)
 
 
+#****************************************************************cirtificates and projects
+
+h17 = tk.Label(scrollable_container.scrollable_frame, text="-------------------------- Your Achievements at a Glance ------------------------", padx=10, pady=15,font=("arial",15))
+h17.grid(row=25, column=0,columnspan=7,sticky="nsew")
 
 
+lab42=tk.Label(scrollable_container.scrollable_frame,text="Cirtificate Name ",padx=10,pady=15)
+lab42.grid(row=26,column=0,sticky="w")
+cirtnames=tk.Entry(scrollable_container.scrollable_frame)
+cirtnames.grid(row=26,column=1,padx=10,pady=15)
 
+lab43=tk.Label(scrollable_container.scrollable_frame,text="Num of Cirtificates",padx=10,pady=15)
+lab43.grid(row=26,column=3,sticky="w")
+cirtnums=tk.Entry(scrollable_container.scrollable_frame)
+cirtnums.grid(row=26,column=4,padx=10,pady=15)
 
+lab44=tk.Label(scrollable_container.scrollable_frame,text="Num of Languages ",padx=10,pady=15)
+lab44.grid(row=26,column=5,sticky="w")
+cirtnames=tk.Entry(scrollable_container.scrollable_frame)
+cirtnames.grid(row=26,column=6,padx=10,pady=15)
 
+lab50=tk.Label(scrollable_container.scrollable_frame,text="project name 1 (if any)",padx=10,pady=15)
+lab50.grid(row=27,column=0,sticky="w")
+pro1names=tk.Entry(scrollable_container.scrollable_frame)
+pro1names.grid(row=27,column=1,padx=10,pady=15)
 
+lab51=tk.Label(scrollable_container.scrollable_frame,text="project name 2 (if any)",padx=10,pady=15)
+lab51.grid(row=27,column=3,sticky="w")
+pro2names=tk.Entry(scrollable_container.scrollable_frame)
+pro2names.grid(row=27,column=4,padx=10,pady=15)
+
+lab52=tk.Label(scrollable_container.scrollable_frame,text="project name 3 (if any)",padx=10,pady=15)
+lab52.grid(row=27,column=5,sticky="w")
+pro3names=tk.Entry(scrollable_container.scrollable_frame)
+pro3names.grid(row=27,column=6,padx=10,pady=15)
 #_______________________________________________________________________________________
+btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="grey")
+btn.grid(row=27, column=0,columnspan=7,sticky="nsew",pady=10)
+
 root.mainloop()
