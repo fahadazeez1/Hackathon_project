@@ -32,7 +32,7 @@ class ScrollableFrame(ttk.Frame):
         self.grid_columnconfigure(0, weight=1)
 
         # Set a minimum size for the canvas to improve visibility
-        self.canvas.config(width=700, height=600)  # Adjust dimensions as neededs
+        self.canvas.config(width=1000, height=600)  # Adjust dimensions as neededs
 # Create the main application window
 root = tk.Tk()
 root.title("Form with Scrollbar using Grid")
@@ -99,7 +99,7 @@ lab7.grid(row=4, column=0, sticky="w")
 hobbiess = tk.Entry(scrollable_container.scrollable_frame)
 hobbiess.grid(row=4, column=1, padx=10, pady=15)
 
-lab71 = tk.Label(scrollable_container.scrollable_frame, text="Hobbies", padx=10, pady=15)
+lab71 = tk.Label(scrollable_container.scrollable_frame, text="About Yourself", padx=10, pady=15)
 lab71.grid(row=4, column=3, sticky="w")
 abouts = tk.Entry(scrollable_container.scrollable_frame)
 abouts.grid(row=4, column=4, padx=10, pady=15)
@@ -109,7 +109,7 @@ abouts.grid(row=4, column=4, padx=10, pady=15)
 
 
 #********************************************education
-h13 = tk.Label(scrollable_container.scrollable_frame, text="Educational Details", padx=10, pady=5,font=("arial",15))
+h13 = tk.Label(scrollable_container.scrollable_frame, text="Educational Details", padx=10, pady=15,font=("arial",15))
 h13.grid(row=5, column=0,columnspan=7,sticky="nsew")
 
 
@@ -146,15 +146,37 @@ education_journeys.grid(row=7,column=6,padx=10,pady=15)
 
 
 
+#*******************************************************LINKS
+
+h14 = tk.Label(scrollable_container.scrollable_frame, text="Social Media Link", padx=10, pady=15,font=("arial",15))
+h14.grid(row=8, column=0,columnspan=7,sticky="nsew")
 
 
+lab21 = tk.Label(scrollable_container.scrollable_frame, text="Facebook link (type no to skip)", padx=10, pady=15)
+lab21.grid(row=9, column=0, sticky="w")
+facebook_links = tk.Entry(scrollable_container.scrollable_frame)
+facebook_links.grid(row=9, column=1, padx=10, pady=15)
 
 
+lab22 = tk.Label(scrollable_container.scrollable_frame, text="Github link (type no to skip)", padx=10, pady=15)
+lab22.grid(row=9, column=3, sticky="w")
+github_links = tk.Entry(scrollable_container.scrollable_frame)
+github_links.grid(row=9, column=4, padx=10, pady=15)
 
+lab23 = tk.Label(scrollable_container.scrollable_frame, text="Linkedin link (type no to skip)", padx=10, pady=15)
+lab23.grid(row=9, column=5, sticky="w")
+linkedin_links = tk.Entry(scrollable_container.scrollable_frame)
+linkedin_links.grid(row=9, column=6, padx=10, pady=15)
 
+lab24 = tk.Label(scrollable_container.scrollable_frame, text="Instagram link (type no to skip)", padx=10, pady=15)
+lab24.grid(row=10, column=0, sticky="w")
+instagram_links = tk.Entry(scrollable_container.scrollable_frame)
+instagram_links.grid(row=10, column=1, padx=10, pady=15)
 
-
-
+lab241 = tk.Label(scrollable_container.scrollable_frame, text="Location link", padx=10, pady=15)
+lab241.grid(row=10, column=3, sticky="w")
+location_links = tk.Entry(scrollable_container.scrollable_frame)
+location_links.grid(row=10, column=4, padx=10, pady=15)
 
 
 
