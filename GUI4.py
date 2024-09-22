@@ -104,6 +104,11 @@ lab71.grid(row=4, column=3, sticky="w")
 abouts = tk.Entry(scrollable_container.scrollable_frame)
 abouts.grid(row=4, column=4, padx=10, pady=15)
 
+lab72 = tk.Label(scrollable_container.scrollable_frame, text="Highest Degree", padx=10, pady=15)
+lab72.grid(row=4, column=5, sticky="w")
+degrees = tk.Entry(scrollable_container.scrollable_frame)
+degrees.grid(row=4, column=6, padx=10, pady=15)
+
 
 
 
@@ -242,6 +247,11 @@ lab20.grid(row=15, column=3, sticky="w")
 bulletProf24s = tk.Entry(scrollable_container.scrollable_frame)
 bulletProf24s.grid(row=15, column=4, padx=10, pady=15)
 
+lab21 = tk.Label(scrollable_container.scrollable_frame, text="Summary", padx=10, pady=15)
+lab21.grid(row=15, column=5, sticky="w")
+summarys = tk.Entry(scrollable_container.scrollable_frame)
+summarys.grid(row=15, column=6, padx=10, pady=15)
+
 
 #***********************************************************************************SKILL
 
@@ -350,8 +360,8 @@ cirtnums.grid(row=26,column=4,padx=10,pady=15)
 
 lab44=tk.Label(scrollable_container.scrollable_frame,text="Num of Languages ",padx=10,pady=15)
 lab44.grid(row=26,column=5,sticky="w")
-cirtnames=tk.Entry(scrollable_container.scrollable_frame)
-cirtnames.grid(row=26,column=6,padx=10,pady=15)
+num_coding_langss=tk.Entry(scrollable_container.scrollable_frame)
+num_coding_langss.grid(row=26,column=6,padx=10,pady=15)
 
 lab50=tk.Label(scrollable_container.scrollable_frame,text="project name 1 (if any)",padx=10,pady=15)
 lab50.grid(row=27,column=0,sticky="w")
@@ -368,7 +378,78 @@ lab52.grid(row=27,column=5,sticky="w")
 pro3names=tk.Entry(scrollable_container.scrollable_frame)
 pro3names.grid(row=27,column=6,padx=10,pady=15)
 #_______________________________________________________________________________________
-btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="grey")
-btn.grid(row=27, column=0,columnspan=7,sticky="nsew",pady=10)
+
+def gen():
+    name=names.get()
+    age=ages.get()
+    dob=dobs.get()
+    address=addresss.get()
+    email=emails.get()
+    mobile_num=mobile_nums.get()
+    degree=degrees.get()
+    role=roles.get()
+    periodProf1=periodProf1s.get()
+    bulletProf11=bulletProf11s.get()
+    bulletProf12=bulletProf12s.get()
+    bulletProf13=bulletProf13s.get()
+    bulletProf14=bulletProf14s.get()
+    periodProf2=periodProf2s.get()
+    bulletProf21=bulletProf21s.get()
+    bulletProf22=bulletProf22s.get()
+    bulletProf23=bulletProf23s.get()
+    bulletProf24=bulletProf24s.get()
+    commaSepSkill1 = role.split(",")[0]
+    commaSepSkill2 = role.split(",")[1]
+    cert_name=cirtnames.get()
+    num_certificates=cirtnums.get()
+    num_coding_langs=num_coding_langss.get()
+    one_line_about=abouts.get()
+    summary=summarys.get()
+    location=location_links.get()
+    schoolName=schoolNames.get()
+    schoolYear=schoolYears.get()
+    schoolJourney=schoolJourneys.get()
+    collegeName=collegeNames.get()
+    education_year=education_years.get()
+    education_journey=education_journeys.get()
+    print("Name:", name)
+    print("Age:", age)
+    print("Date of Birth:", dob)
+    print("Address:", address)
+    print("Email:", email)
+    print("Mobile Number:", mobile_num)
+    print("Degree:", degree)
+    print("Role:", role)
+    print("Period of Professional Experience 1:", periodProf1)
+    print("Bullet Point 1 of Prof Experience 1:", bulletProf11)
+    print("Bullet Point 2 of Prof Experience 1:", bulletProf12)
+    print("Bullet Point 3 of Prof Experience 1:", bulletProf13)
+    print("Bullet Point 4 of Prof Experience 1:", bulletProf14)
+    print("Period of Professional Experience 2:", periodProf2)
+    print("Bullet Point 1 of Prof Experience 2:", bulletProf21)
+    print("Bullet Point 2 of Prof Experience 2:", bulletProf22)
+    print("Bullet Point 3 of Prof Experience 2:", bulletProf23)
+    print("Bullet Point 4 of Prof Experience 2:", bulletProf24)
+    print("First Skill from Role:", commaSepSkill1)
+    print("Second Skill from Role:", commaSepSkill2)
+    print("Certificate Name:", cert_name)
+    print("Number of Certificates:", num_certificates)
+    print("Number of Coding Languages Known:", num_coding_langs)
+    print("One Line About:", one_line_about)
+    print("Summary:", summary)
+    print("Location:", location)
+    print("School Name:", schoolName)
+    print("School Year:", schoolYear)
+    print("School Journey:", schoolJourney)
+    print("College Name:", collegeName)
+    print("Education Year:", education_year)
+    print("Education Journey:", education_journey)
+    
+    
+
+
+#___________________________________________________________________________________________
+btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="grey",command=gen)
+btn.grid(row=28, column=0,columnspan=7,sticky="nsew",pady=10)
 
 root.mainloop()
