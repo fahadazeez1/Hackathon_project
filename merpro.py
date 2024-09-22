@@ -109,7 +109,7 @@ while True:
     except ValueError:
         print("Invalid input. Please enter a number.")
 
-projects = [input(f"Enter the name of project {i + 1}: ") for i in range(num_projects)]
+projects = [input(f"Enter the name of project {i + 1}: ") for i in range(6)]
 
 # First set of placeholders and replacements
 placeholders1 = ['<!-- 1prop -->', '<!-- 2prop -->', '<!-- 3prop -->']

@@ -289,3 +289,10 @@ def repl():
     print(t)
 btn=ttk.Button(scrollable_container.scrollable_frame,command=repl,text="click").grid(row=55,column=0)
 root.mainloop()
+facebook_link = input("Enter your Facebook link (or type 'n' to skip): ").strip()
+if facebook_link.lower()=="n":
+    facebook_link="no"
+else:
+    facebook_link=facebook_link    
+print(facebook_link)    
+# facebook_link = facebook_link if facebook_link.lower()!= "n" else 'no'
