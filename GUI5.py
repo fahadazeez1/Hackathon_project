@@ -598,7 +598,7 @@ def gen():
     print(f"{name} portfolio created succesfully") 
 
 
-
+ 
 
 
 
