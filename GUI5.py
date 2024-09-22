@@ -415,6 +415,7 @@ def gen():
     github_link=github_links.get()
     projectss=[pro1names.get(),pro2names.get(),pro3names.get()]
     projects=[item for item in projectss if item]
+    num_projects=len(projects)
 
     print("Name:", name)
     print("Age:", age)
@@ -458,7 +459,152 @@ def gen():
     print("x:", skills)
     print("y:", levels)
     print("z:", projects)
+    with open("updated_index.html", "r") as file:
+        html_content = file.read()
+
+    def replace_social_media_placeholder(html_content, platform, placeholder, class_name, icon_class, link):
+        if link and link.lower() != 'no':
+            return html_content.replace(f'<!-- {placeholder} -->', f'<a href="{link}" class="{class_name}"><i class="bi {icon_class}"></i></a>')
+        return html_content
+
+    placeholders1 = ['<!-- 1prop -->', '<!-- 2prop -->', '<!-- 3prop -->']
+    filter_classes = ['filter-app', 'filter-product', 'filter-books']
+    for i in range(3):
+        if i < num_projects:
+            html_content = html_content.replace(placeholders1[i], f'<li data-filter=".{filter_classes[i]}">{projects[i]}</li>')
+        else:
+            html_content = html_content.replace(placeholders1[i], '')
+
     
+    placeholders2 = ['<!-- 11pro -->', '<!-- 12pro -->', '<!-- 13pro -->',
+                 '<!-- 21pro -->', '<!-- 22pro -->', '<!-- 23pro -->',
+                 '<!-- 31pro -->', '<!-- 32pro -->', '<!-- 33pro -->']
+    replacements2 = []
+
+    if num_projects >= 1:
+        replacements2 += [
+        '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="p21.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{}</h4>
+                  <a href="p21.png" title="Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>'''.format(projects[0]),
+        '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="p22.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{}</h4>
+                  <a href="p22.png" title="Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>'''.format(projects[0]),
+        '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="p23.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{}</h4>
+                  <a href="p23.png" title="Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>'''.format(projects[0])
+    ]
+
+    if num_projects >= 2:
+        replacements2 += [
+        '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="p11.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{}</h4>
+                  <a href="p11.png" title="Project" data-gallery="portfolio-gallery-product" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>'''.format(projects[1]),
+        '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="p12.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{}</h4>
+                  <a href="p12.png" title="Project" data-gallery="portfolio-gallery-product" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>'''.format(projects[1]),
+        '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="p13.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{}</h4>
+                  <a href="p13.png" title="Project" data-gallery="portfolio-gallery-product" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>'''.format(projects[1])
+    ]
+
+    if num_projects >= 3:
+        replacements2 += [
+        '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="p31.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{}</h4>
+                  <a href="p31.png" title="Project" data-gallery="portfolio-gallery-book" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>'''.format(projects[2]),
+        '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="p32.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{}</h4>
+                  <a href="p32.png" title="Project" data-gallery="portfolio-gallery-book" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>'''.format(projects[2]),
+        '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="p33.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{}</h4>
+                  <a href="p33.png" title="Project" data-gallery="portfolio-gallery-book" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>'''.format(projects[2])
+    ]
+        
+        
+    for placeholder, replacement in zip(placeholders2, replacements2):
+        html_content = html_content.replace(placeholder, replacement)
+
+
+
+
+    file_name = f"{name.lower()}'s portfolio.html"
+
+      # Writing the modified content to the new file
+    with open(file_name, "w") as new_file:
+        new_file.write(html_content)
+    print(f"{name} portfolio created succesfully") 
+
+
+
+
+
+
+
+
+
 
 #___________________________________________________________________________________________
 btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="grey",command=gen)
