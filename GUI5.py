@@ -55,9 +55,6 @@ h12 = tk.Label(scrollable_container.scrollable_frame, text="--------------------
 h12.grid(row=1, column=0,columnspan=7,sticky="nsew")
 
 
-
-
-
 lab1 = tk.Label(scrollable_container.scrollable_frame, text="Name", padx=1, pady=15)
 lab1.grid(row=2, column=0, sticky="w")
 names = tk.Entry(scrollable_container.scrollable_frame)
@@ -456,6 +453,7 @@ def gen():
     print("in:", instagram_link)
     skillNexp=[s1names.get(),s2names.get(),s3names.get(),s4names.get(),s5names.get(),s6names.get(),s7names.get(),s8names.get()]
     skills=[item for item in skillNexp if item]
+    num_skills=len(skills)
     skillLexp=[s1vals.get(),s2vals.get(),s3vals.get(),s4vals.get(),s5vals.get(),s6vals.get(),s7vals.get(),s8vals.get()]
     levels=[item for item in skillLexp if item]
     print("x:", skills)
@@ -639,10 +637,6 @@ def gen():
     html_content = html_content.replace('<li>bulletProf24</li>', f'<li>{bulletProf24}</li>')
 
 
-
-
-
-
     html_content = html_content.replace('<p>addCon</p>', f'<p>{address}</p>')
     html_content = html_content.replace('<p>mobCon</p>', f'<p>{mobile_num}</p>')
     html_content = html_content.replace('<p>emailCon</p>', f'<p>{email}</p>')
@@ -656,6 +650,23 @@ def gen():
 
 
 
+    for i in range(num_skills):
+        
+        skill_div = f"""
+              <div class="progress">
+              <span class="skill"><span>{skills[i]}</span> <i class="val">{levels[i]}%</i></span>
+              <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="{levels[i]}" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              </div>
+              """
+        html_content = html_content.replace(f"<!-- enter{i+1}skill -->", skill_div)
+    html_content = replace_social_media_placeholder(html_content, "Facebook", "linkfb", "facebook", "bi-facebook", facebook_link)
+    html_content = replace_social_media_placeholder(html_content, "Instagram", "linkinsta", "instagram", "bi-instagram", instagram_link)
+    html_content = replace_social_media_placeholder(html_content, "GitHub", "linkgit", "github", "bi-github", github_link)
+    html_content = replace_social_media_placeholder(html_content, "LinkedIn", "linklink", "linkedin", "bi-linkedin", linkedin_link)    
+
+
 
     file_name = f"{name.lower()}'s portfolio.html"
 
@@ -663,14 +674,6 @@ def gen():
     with open(file_name, "w") as new_file:
         new_file.write(html_content)
     print(f"{name} portfolio created succesfully") 
-
-
- 
-
-
-
-
-
 
 
 #___________________________________________________________________________________________
