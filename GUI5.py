@@ -32,7 +32,7 @@ class ScrollableFrame(ttk.Frame):
         self.grid_columnconfigure(0, weight=1)
 
         # Set a minimum size for the canvas to improve visibility
-        self.canvas.config(width=1050, height=600)  # Adjust dimensions as neededs
+        self.canvas.config(width=1250, height=600)  # Adjust dimensions as neededs
 # Create the main application window
 root = tk.Tk()
 root.title("Form with Scrollbar using Grid")
@@ -58,12 +58,12 @@ h12.grid(row=1, column=0,columnspan=7,sticky="nsew")
 
 
 
-lab1 = tk.Label(scrollable_container.scrollable_frame, text="Name", padx=10, pady=15)
+lab1 = tk.Label(scrollable_container.scrollable_frame, text="Name", padx=1, pady=15)
 lab1.grid(row=2, column=0, sticky="w")
 names = tk.Entry(scrollable_container.scrollable_frame)
 names.grid(row=2, column=1, padx=10, pady=15)
 
-lab2 = tk.Label(scrollable_container.scrollable_frame, text="Age", padx=10, pady=15)
+lab2 = tk.Label(scrollable_container.scrollable_frame, text="Age", padx=1, pady=15)
 lab2.grid(row=2, column=3, sticky="w")
 ages = tk.Entry(scrollable_container.scrollable_frame)
 ages.grid(row=2, column=4, padx=10, pady=15)
@@ -384,6 +384,7 @@ def gen():
     email=emails.get()
     mobile_num=mobile_nums.get()
     degree=degrees.get()
+    hobbies=hobbiess.get()
     role=roles.get()
     periodProf1=periodProf1s.get()
     bulletProf11=bulletProf11s.get()
@@ -415,6 +416,7 @@ def gen():
     github_link=github_links.get()
     projectss=[pro1names.get(),pro2names.get(),pro3names.get()]
     projects=[item for item in projectss if item]
+    num_projectss=len(projects)
     num_projects=len(projects)
 
     print("Name:", name)
@@ -583,7 +585,72 @@ def gen():
             </div>'''.format(projects[2])
     ]
         
-        
+    html_content = html_content.replace("<title>yourTitle</title>", f"<title>{name}'s Portfolio</title>")
+    html_content = html_content.replace('<h1 class="sitename">yourName</h1>', f'<h1 class="sitename">{name}</h1>')
+    html_content = html_content.replace('<h2>yourName</h2>', f'<h2>{name}</h2>')
+    html_content = html_content.replace('commaSepSkills', role)
+    html_content = html_content.replace('oneLineAbout', one_line_about)
+    # html_content = html_content.replace('headingForAbout', heading_about)
+    html_content = html_content.replace('<span>yourName</span>', f'<span>{name}</span>')
+    html_content = html_content.replace('<span>dob</span>', f'<span>{dob}</span>')
+    html_content = html_content.replace('<span>mobNum</span>', f'<span>{mobile_num}</span>')
+    html_content = html_content.replace('<span>Add</span>', f'<span>{address}</span>')
+    html_content = html_content.replace('<span>yourAge</span>', f'<span>{age}</span>')
+    html_content = html_content.replace('<span>yourDeg</span>', f'<span>{degree}</span>')
+    html_content = html_content.replace('<span>yourEmail</span>', f'<span>{email}</span>')
+    html_content = html_content.replace('<span>yourHobbies</span>', f'<span>{hobbies}</span>')
+
+
+    html_content = html_content.replace('totalNum1', str(num_certificates))
+    html_content = html_content.replace('cirtName', cert_name)
+    html_content = html_content.replace('totalNum2', str(num_projectss))
+    html_content = html_content.replace('totalNum3', str(num_coding_langs))
+    # html_content = html_content.replace('totalNum4', str(num_grp_work))
+
+
+
+    html_content = html_content.replace('<p><em>SummarySumm</em></p>', f'<p><em>{summary}</em></p>')
+    html_content = html_content.replace('<li>addSumm</li>', f'<li>{address}</li>')
+    html_content = html_content.replace('<li>mobNumSumm</li>', f'<li>{mobile_num}</li>')
+    html_content = html_content.replace('<li>emailSumm</li>', f'<li>{email}</li>')
+    html_content = html_content.replace('<h4>yourNameSumm</h4>', f'<h4>{name}</h4>')
+
+
+    html_content = html_content.replace('<h5>yearEdu</h5>', f'<h5>{education_year}</h5>')
+    html_content = html_content.replace('<p><em>CollegeNameEdu</em></p>', f'<p><em>{collegeName}</em></p>')
+    html_content = html_content.replace('<p>courseStatusEdu</p>', f'<p>{education_journey}</p>')
+
+    html_content = html_content.replace('<h5>periodMatric</h5>', f'<h5>{schoolYear}</h5>')
+    html_content = html_content.replace('<p><em>schoolnameEdu</em></p>', f'<p><em>{schoolName}</em></p>')
+    html_content = html_content.replace('<p>schoolStatusEdu</p>', f'<p>{schoolJourney}</p>')
+
+    html_content = html_content.replace('<h4>commaSepSkill1</h4>', f'<h4>{commaSepSkill1}</h4>')
+    html_content = html_content.replace('<h5>periodProf1</h5>', f'<h5>{periodProf1}</h5>')
+    html_content = html_content.replace('<li>bulletProf11</li>', f'<li>{bulletProf11}</li>')
+    html_content = html_content.replace('<li>bulletProf12</li>', f'<li>{bulletProf12}</li>')
+    html_content = html_content.replace('<li>bulletProf13</li>', f'<li>{bulletProf13}</li>')
+    html_content = html_content.replace('<li>bulletProf14</li>', f'<li>{bulletProf14}</li>')
+
+    html_content = html_content.replace('<h4>commaSepSkill2</h4>', f'<h4>{commaSepSkill2}</h4>')
+    html_content = html_content.replace('<h5>periodProf2</h5>', f'<h5>{periodProf2}</h5>')
+    html_content = html_content.replace('<li>bulletProf21</li>', f'<li>{bulletProf21}</li>')
+    html_content = html_content.replace('<li>bulletProf22</li>', f'<li>{bulletProf22}</li>')
+    html_content = html_content.replace('<li>bulletProf23</li>', f'<li>{bulletProf23}</li>')
+    html_content = html_content.replace('<li>bulletProf24</li>', f'<li>{bulletProf24}</li>')
+
+
+
+
+
+
+    html_content = html_content.replace('<p>addCon</p>', f'<p>{address}</p>')
+    html_content = html_content.replace('<p>mobCon</p>', f'<p>{mobile_num}</p>')
+    html_content = html_content.replace('<p>emailCon</p>', f'<p>{email}</p>')
+    html_content = html_content.replace('<strong class="px-1 sitename">userName\'s portfolio</strong>', f'<strong class="px-1 sitename">{name}\'s portfolio</strong>')
+
+# html_content = html_content.replace('<strong class="px-1 sitename">userName portfolio</strong>', f'<strong class="px-1 sitename">{name} portfolio</strong>')
+    html_content = html_content.replace('<!--mapLink-->', location)
+
     for placeholder, replacement in zip(placeholders2, replacements2):
         html_content = html_content.replace(placeholder, replacement)
 
