@@ -32,9 +32,10 @@ class ScrollableFrame(ttk.Frame):
         self.grid_columnconfigure(0, weight=1)
 
         # Set a minimum size for the canvas to improve visibility
-        self.canvas.config(width=1250, height=600)  # Adjust dimensions as neededs
+        self.canvas.config(width=1255, height=600)  # Adjust dimensions as neededs
 # Create the main application window
 root = tk.Tk()
+root.configure(bg="#f4f4f9")
 root.title("Portfolio Craft Studio")
 root.geometry("600x600")  # Increased height for more space
 
@@ -677,7 +678,7 @@ def gen():
 
 
 #___________________________________________________________________________________________
-btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="grey",command=gen)
-btn.grid(row=29, column=0,columnspan=7,sticky="nsew",pady=10)
+btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="#ced6e0",command=gen, fg="#ffffff")
+btn.grid(row=29, column=3,columnspan=2,sticky="nsew",pady=10)
 
 root.mainloop()
