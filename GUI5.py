@@ -35,7 +35,7 @@ class ScrollableFrame(ttk.Frame):
         self.canvas.config(width=1250, height=600)  # Adjust dimensions as neededs
 # Create the main application window
 root = tk.Tk()
-root.title("Form with Scrollbar using Grid")
+root.title("Portfolio Craft Studio")
 root.geometry("600x600")  # Increased height for more space
 
 # Add the scrollable frame
@@ -51,16 +51,16 @@ h11.grid(row=0, column=0,columnspan=7,sticky="nsew")
 
 #**************************************personal
 
-h12 = tk.Label(scrollable_container.scrollable_frame, text="-------------------------------------Personal details-----------------------------------", padx=10, pady=5,font=("arial",15))
+h12 = tk.Label(scrollable_container.scrollable_frame, text="Personal details", padx=10, pady=5,font=("arial",15))
 h12.grid(row=1, column=0,columnspan=7,sticky="nsew")
 
 
-lab1 = tk.Label(scrollable_container.scrollable_frame, text="Name", padx=1, pady=15)
+lab1 = tk.Label(scrollable_container.scrollable_frame, text="Name", padx=10, pady=15)
 lab1.grid(row=2, column=0, sticky="w")
 names = tk.Entry(scrollable_container.scrollable_frame)
 names.grid(row=2, column=1, padx=10, pady=15)
 
-lab2 = tk.Label(scrollable_container.scrollable_frame, text="Age", padx=1, pady=15)
+lab2 = tk.Label(scrollable_container.scrollable_frame, text="Age", padx=10, pady=15)
 lab2.grid(row=2, column=3, sticky="w")
 ages = tk.Entry(scrollable_container.scrollable_frame)
 ages.grid(row=2, column=4, padx=10, pady=15)
@@ -111,7 +111,7 @@ degrees.grid(row=4, column=6, padx=10, pady=15)
 
 
 #********************************************education
-h13 = tk.Label(scrollable_container.scrollable_frame, text="-------------------------------Educational Details-----------------------------", padx=10, pady=15,font=("arial",15))
+h13 = tk.Label(scrollable_container.scrollable_frame, text="Educational Details", padx=10, pady=15,font=("arial",15))
 h13.grid(row=5, column=0,columnspan=7,sticky="nsew")
 
 
@@ -150,7 +150,7 @@ education_journeys.grid(row=7,column=6,padx=10,pady=15)
 
 #*******************************************************LINKS
 
-h14 = tk.Label(scrollable_container.scrollable_frame, text="--------------------------------Social Media Link----------------------------", padx=10, pady=15,font=("arial",15))
+h14 = tk.Label(scrollable_container.scrollable_frame, text="Social Media Link", padx=10, pady=15,font=("arial",15))
 h14.grid(row=8, column=0,columnspan=7,sticky="nsew")
 
 
@@ -181,7 +181,7 @@ location_links = tk.Entry(scrollable_container.scrollable_frame)
 location_links.grid(row=10, column=4, padx=10, pady=15)
 
 #****************************************************professional details
-h15 = tk.Label(scrollable_container.scrollable_frame, text="--------------------------Professional Summary------------------------", padx=10, pady=15,font=("arial",15))
+h15 = tk.Label(scrollable_container.scrollable_frame, text="Professional Summary", padx=10, pady=15,font=("arial",15))
 h15.grid(row=11, column=0,columnspan=7,sticky="nsew")
 
 
@@ -252,7 +252,7 @@ summarys.grid(row=15, column=6, padx=10, pady=15)
 
 #***********************************************************************************SKILL
 
-h16 = tk.Label(scrollable_container.scrollable_frame, text="--------------------------Skills------------------------", padx=10, pady=15,font=("arial",15))
+h16 = tk.Label(scrollable_container.scrollable_frame, text="Skills", padx=10, pady=15,font=("arial",15))
 h16.grid(row=16, column=0,columnspan=7,sticky="nsew")
 
 
@@ -339,7 +339,7 @@ s8vals=tk.Entry(scrollable_container.scrollable_frame)
 s8vals.grid(row=25,column=4,padx=10,pady=15)
 
 # Certificates and Projects section
-h17 = tk.Label(scrollable_container.scrollable_frame, text="-------------------------- Your Achievements at a Glance ------------------------", padx=10, pady=15,font=("arial",15))
+h17 = tk.Label(scrollable_container.scrollable_frame, text="Your Achievements at a Glance ", padx=10, pady=15,font=("arial",15))
 h17.grid(row=26, column=0,columnspan=7,sticky="nsew")
 
 lab42=tk.Label(scrollable_container.scrollable_frame,text="Certificate Name ",padx=10,pady=15)
