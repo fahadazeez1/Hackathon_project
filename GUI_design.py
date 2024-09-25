@@ -37,7 +37,7 @@ class ScrollableFrame(ttk.Frame):
 root = tk.Tk()
 root.configure(bg="#f4f4f9")
 root.title("Portfolio Craft Studio")
-root.geometry("600x600")  # Increased height for more space
+root.geometry("1300x600")  # Increased height for more space
 
 # Add the scrollable frame
 scrollable_container = ScrollableFrame(root)
@@ -343,35 +343,41 @@ s8vals.grid(row=25,column=5,padx=10,pady=15)
 h17 = tk.Label(scrollable_container.scrollable_frame, text="Your Achievements at a Glance ", padx=10, pady=15,font=("arial",15))
 h17.grid(row=26, column=0,columnspan=8,sticky="nsew")
 
-lab42=tk.Label(scrollable_container.scrollable_frame,text="Certificate Name ",padx=10,pady=15)
+lab42=tk.Label(scrollable_container.scrollable_frame,text="•  Certificate Name ",padx=10,pady=15)
 lab42.grid(row=27,column=0,sticky="w")
 cirtnames=tk.Entry(scrollable_container.scrollable_frame)
 cirtnames.grid(row=27,column=1,padx=10,pady=15)
 
-lab43=tk.Label(scrollable_container.scrollable_frame,text="Num of Certificates",padx=10,pady=15)
+lab43=tk.Label(scrollable_container.scrollable_frame,text="•  Num of Certificates",padx=10,pady=15)
 lab43.grid(row=27,column=3,sticky="w")
 cirtnums=tk.Entry(scrollable_container.scrollable_frame)
-cirtnums.grid(row=27,column=4,padx=10,pady=15)
+cirtnums.grid(row=27,column=5,padx=10,pady=15)
 
-lab44=tk.Label(scrollable_container.scrollable_frame,text="Num of Languages ",padx=10,pady=15)
-lab44.grid(row=27,column=5,sticky="w")
+lab44=tk.Label(scrollable_container.scrollable_frame,text="•  Num of Languages ",padx=10,pady=15)
+lab44.grid(row=27,column=6,sticky="w")
 num_coding_langss=tk.Entry(scrollable_container.scrollable_frame)
-num_coding_langss.grid(row=27,column=6,padx=10,pady=15)
+num_coding_langss.grid(row=27,column=7,padx=10,pady=15)
 
-lab50=tk.Label(scrollable_container.scrollable_frame,text="Project name 1 (if any)",padx=10,pady=15)
+lab50=tk.Label(scrollable_container.scrollable_frame,text="•  Project name 1 (if any)",padx=10,pady=15)
 lab50.grid(row=28,column=0,sticky="w")
 pro1names=tk.Entry(scrollable_container.scrollable_frame)
-pro1names.grid(row=28,column=1,padx=10,pady=15)
+pro1names.grid(row=28,column=1,padx=10,pady=15,sticky="w")
 
-lab51=tk.Label(scrollable_container.scrollable_frame,text="Project name 2 (if any)",padx=10,pady=15)
+lab51=tk.Label(scrollable_container.scrollable_frame,text="•  Project name 2 (if any)",padx=10,pady=15)
 lab51.grid(row=28,column=3,sticky="w")
 pro2names=tk.Entry(scrollable_container.scrollable_frame)
-pro2names.grid(row=28,column=4,padx=10,pady=15)
+pro2names.grid(row=28,column=5,padx=10,pady=15,sticky="w")
 
-lab52=tk.Label(scrollable_container.scrollable_frame,text="Project name 3 (if any)",padx=10,pady=15)
-lab52.grid(row=28,column=5,sticky="w")
+lab52=tk.Label(scrollable_container.scrollable_frame,text="•  Project name 3 (if any)",padx=10,pady=15)
+lab52.grid(row=28,column=6,sticky="w")
 pro3names=tk.Entry(scrollable_container.scrollable_frame)
-pro3names.grid(row=28,column=6,padx=10,pady=15)
+pro3names.grid(row=28,column=7,padx=10,pady=15,sticky="w")
+#_______________________________________________________________________________________
+
+# lab523=tk.Label(scrollable_container.scrollable_frame,text="•  ",padx=10,pady=15)
+# lab523.grid(row=29,column=0)
+# pro3names=tk.Entry(scrollable_container.scrollable_frame)
+# pro3names.grid(row=28,column=6,padx=10,pady=15)
 #_______________________________________________________________________________________
 
 def gen():
@@ -645,6 +651,6 @@ def gen():
 
 #___________________________________________________________________________________________
 btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="#ced6e0",command=gen, fg="#ffffff")
-btn.grid(row=29, column=3,columnspan=2,sticky="nsew",pady=10)
+btn.grid(row=30, column=4,columnspan=2,sticky="nsew",pady=10)
 
 root.mainloop()
