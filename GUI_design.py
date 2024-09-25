@@ -116,36 +116,36 @@ h13 = tk.Label(scrollable_container.scrollable_frame, text="Educational Details"
 h13.grid(row=5, column=0,columnspan=7,sticky="nsew")
 
 
-lab8 = tk.Label(scrollable_container.scrollable_frame, text="School Name", padx=10, pady=15)
+lab8 = tk.Label(scrollable_container.scrollable_frame, text="•  School Name", padx=10, pady=15)
 lab8.grid(row=6, column=0, sticky="w")
 schoolNames = tk.Entry(scrollable_container.scrollable_frame)
 schoolNames.grid(row=6, column=1, padx=10, pady=15)
 
-lab29=tk.Label(scrollable_container.scrollable_frame,text="Passout Year",padx=10,pady=15)
-lab29.grid(row=6,column=3,sticky="w")
+lab29=tk.Label(scrollable_container.scrollable_frame,text="•  Passout Year",padx=10,pady=15)
+lab29.grid(row=6,column=4,sticky="w")
 schoolYears=tk.Entry(scrollable_container.scrollable_frame)
-schoolYears.grid(row=6,column=4,padx=10,pady=15)
+schoolYears.grid(row=6,column=5,padx=10,pady=15)
 
-lab31=tk.Label(scrollable_container.scrollable_frame,text="Journey",padx=10,pady=15)
-lab31.grid(row=6,column=5,sticky="w")
+lab31=tk.Label(scrollable_container.scrollable_frame,text="•  Journey",padx=10,pady=15)
+lab31.grid(row=6,column=6,sticky="w")
 schoolJourneys=tk.Entry(scrollable_container.scrollable_frame)
-schoolJourneys.grid(row=6,column=6,padx=10,pady=15)
+schoolJourneys.grid(row=6,column=7,padx=10,pady=15)
 
 
-lab9 = tk.Label(scrollable_container.scrollable_frame, text="College Name", padx=10, pady=15)
+lab9 = tk.Label(scrollable_container.scrollable_frame, text="•  College Name", padx=10, pady=15)
 lab9.grid(row=7, column=0, sticky="w")
 collegeNames = tk.Entry(scrollable_container.scrollable_frame)
 collegeNames.grid(row=7, column=1, padx=10, pady=15)
 
-lab30=tk.Label(scrollable_container.scrollable_frame,text="Passout Year",padx=10,pady=15)
-lab30.grid(row=7,column=3,sticky="w")
+lab30=tk.Label(scrollable_container.scrollable_frame,text="•  Passout Year",padx=10,pady=15)
+lab30.grid(row=7,column=4,sticky="w")
 education_years=tk.Entry(scrollable_container.scrollable_frame)
-education_years.grid(row=7,column=4,padx=10,pady=15)
+education_years.grid(row=7,column=5,padx=10,pady=15)
 
-lab32=tk.Label(scrollable_container.scrollable_frame,text="Journey",padx=10,pady=15)
-lab32.grid(row=7,column=5,sticky="w")
+lab32=tk.Label(scrollable_container.scrollable_frame,text="•  Journey",padx=10,pady=15)
+lab32.grid(row=7,column=6,sticky="w")
 education_journeys=tk.Entry(scrollable_container.scrollable_frame)
-education_journeys.grid(row=7,column=6,padx=10,pady=15)
+education_journeys.grid(row=7,column=7,padx=10,pady=15)
 
 
 
