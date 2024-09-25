@@ -113,7 +113,7 @@ degrees.grid(row=4, column=7, padx=10, pady=15)
 
 #********************************************education
 h13 = tk.Label(scrollable_container.scrollable_frame, text="Educational Details", padx=10, pady=15,font=("arial",15))
-h13.grid(row=5, column=0,columnspan=7,sticky="nsew")
+h13.grid(row=5, column=0,columnspan=8,sticky="nsew")
 
 
 lab8 = tk.Label(scrollable_container.scrollable_frame, text="•  School Name", padx=10, pady=15)
@@ -152,196 +152,196 @@ education_journeys.grid(row=7,column=7,padx=10,pady=15)
 #*******************************************************LINKS
 
 h14 = tk.Label(scrollable_container.scrollable_frame, text="Social Media Link", padx=10, pady=15,font=("arial",15))
-h14.grid(row=8, column=0,columnspan=7,sticky="nsew")
+h14.grid(row=8, column=0,columnspan=8,sticky="nsew")
 
 
-lab21 = tk.Label(scrollable_container.scrollable_frame, text="Facebook link (type no to skip)", padx=10, pady=15)
+lab21 = tk.Label(scrollable_container.scrollable_frame, text="•  Facebook link (type no to skip)", padx=10, pady=15)
 lab21.grid(row=9, column=0, sticky="w")
 facebook_links = tk.Entry(scrollable_container.scrollable_frame)
 facebook_links.grid(row=9, column=1, padx=10, pady=15)
 
 
-lab22 = tk.Label(scrollable_container.scrollable_frame, text="Github link (type no to skip)", padx=10, pady=15)
-lab22.grid(row=9, column=3, sticky="w")
+lab22 = tk.Label(scrollable_container.scrollable_frame, text="•  Github link (type no to skip)", padx=10, pady=15)
+lab22.grid(row=9, column=4, sticky="w")
 github_links = tk.Entry(scrollable_container.scrollable_frame)
-github_links.grid(row=9, column=4, padx=10, pady=15)
+github_links.grid(row=9, column=5, padx=10, pady=15)
 
-lab23 = tk.Label(scrollable_container.scrollable_frame, text="Linkedin link (type no to skip)", padx=10, pady=15)
-lab23.grid(row=9, column=5, sticky="w")
+lab23 = tk.Label(scrollable_container.scrollable_frame, text="•  Linkedin link (type no to skip)", padx=10, pady=15)
+lab23.grid(row=9, column=6, sticky="w")
 linkedin_links = tk.Entry(scrollable_container.scrollable_frame)
-linkedin_links.grid(row=9, column=6, padx=10, pady=15)
+linkedin_links.grid(row=9, column=7, padx=10, pady=15)
 
-lab24 = tk.Label(scrollable_container.scrollable_frame, text="Instagram link (type no to skip)", padx=10, pady=15)
+lab24 = tk.Label(scrollable_container.scrollable_frame, text="•  Instagram link (type no to skip)", padx=10, pady=15)
 lab24.grid(row=10, column=0, sticky="w")
 instagram_links = tk.Entry(scrollable_container.scrollable_frame)
 instagram_links.grid(row=10, column=1, padx=10, pady=15)
 
-lab241 = tk.Label(scrollable_container.scrollable_frame, text="Location link", padx=10, pady=15)
-lab241.grid(row=10, column=3, sticky="w")
+lab241 = tk.Label(scrollable_container.scrollable_frame, text="•  Location link", padx=10, pady=15)
+lab241.grid(row=10, column=4, sticky="w")
 location_links = tk.Entry(scrollable_container.scrollable_frame)
-location_links.grid(row=10, column=4, padx=10, pady=15)
+location_links.grid(row=10, column=5, padx=10, pady=15)
 
 #****************************************************professional details
 h15 = tk.Label(scrollable_container.scrollable_frame, text="Professional Summary", padx=10, pady=15,font=("arial",15))
-h15.grid(row=11, column=0,columnspan=7,sticky="nsew")
+h15.grid(row=11, column=0,columnspan=8,sticky="nsew")
 
 
-lab10 = tk.Label(scrollable_container.scrollable_frame, text="Role (comma separated)", padx=10, pady=15)
+lab10 = tk.Label(scrollable_container.scrollable_frame, text="•  Role (comma separated)", padx=10, pady=15)
 lab10.grid(row=12, column=0, sticky="w")
 roles = tk.Entry(scrollable_container.scrollable_frame)
 roles.grid(row=12, column=1, padx=10, pady=15)
 
-lab11 = tk.Label(scrollable_container.scrollable_frame, text="period of your first role", padx=10, pady=15)
-lab11.grid(row=12, column=3, sticky="w")
+lab11 = tk.Label(scrollable_container.scrollable_frame, text="•  period of your first role", padx=10, pady=15)
+lab11.grid(row=12, column=4, sticky="w")
 periodProf1s = tk.Entry(scrollable_container.scrollable_frame)
-periodProf1s.grid(row=12, column=4, padx=10, pady=15)
+periodProf1s.grid(row=12, column=5, padx=10, pady=15)
 
-lab16 = tk.Label(scrollable_container.scrollable_frame, text="period of your first role", padx=10, pady=15)
-lab16.grid(row=12, column=5, sticky="w")
+lab16 = tk.Label(scrollable_container.scrollable_frame, text="•  period of your first role", padx=10, pady=15)
+lab16.grid(row=12, column=6, sticky="w")
 periodProf2s = tk.Entry(scrollable_container.scrollable_frame)
-periodProf2s.grid(row=12, column=6, padx=10, pady=15)
+periodProf2s.grid(row=12, column=7, padx=10, pady=15)
 
 
 
-lab12 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 1", padx=10, pady=15)
+lab12 = tk.Label(scrollable_container.scrollable_frame, text="•  Point for the Role 1", padx=10, pady=15)
 lab12.grid(row=13, column=0, sticky="w")
 bulletProf11s = tk.Entry(scrollable_container.scrollable_frame)
 bulletProf11s.grid(row=13, column=1, padx=10, pady=15)
 
-lab13 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 1", padx=10, pady=15)
-lab13.grid(row=13, column=3, sticky="w")
+lab13 = tk.Label(scrollable_container.scrollable_frame, text="•  Point for the Role 1", padx=10, pady=15)
+lab13.grid(row=13, column=4, sticky="w")
 bulletProf12s = tk.Entry(scrollable_container.scrollable_frame)
-bulletProf12s.grid(row=13, column=4, padx=10, pady=15)
+bulletProf12s.grid(row=13, column=5, padx=10, pady=15)
 
-lab14 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 1", padx=10, pady=5)
-lab14.grid(row=13, column=5, sticky="w")
+lab14 = tk.Label(scrollable_container.scrollable_frame, text="•  Point for the Role 1", padx=10, pady=5)
+lab14.grid(row=13, column=6, sticky="w")
 bulletProf13s = tk.Entry(scrollable_container.scrollable_frame)
-bulletProf13s.grid(row=13, column=6, padx=10, pady=5)
+bulletProf13s.grid(row=13, column=7, padx=10, pady=5)
 
-lab15 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 1", padx=10, pady=15)
+lab15 = tk.Label(scrollable_container.scrollable_frame, text="•  Point for the Role 1", padx=10, pady=15)
 lab15.grid(row=14, column=0, sticky="w")
 bulletProf14s = tk.Entry(scrollable_container.scrollable_frame)
 bulletProf14s.grid(row=14, column=1, padx=10, pady=15)
 
 
 
-lab17 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 2", padx=10, pady=15)
-lab17.grid(row=14, column=3, sticky="w")
+lab17 = tk.Label(scrollable_container.scrollable_frame, text="•  Point for the Role 2", padx=10, pady=15)
+lab17.grid(row=14, column=4, sticky="w")
 bulletProf21s = tk.Entry(scrollable_container.scrollable_frame)
-bulletProf21s.grid(row=14, column=4, padx=10, pady=15)
+bulletProf21s.grid(row=14, column=5, padx=10, pady=15)
 
-lab18 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 2", padx=10, pady=15)
-lab18.grid(row=14, column=5, sticky="w")
+lab18 = tk.Label(scrollable_container.scrollable_frame, text="•  Point for the Role 2", padx=10, pady=15)
+lab18.grid(row=14, column=6, sticky="w")
 bulletProf22s = tk.Entry(scrollable_container.scrollable_frame)
-bulletProf22s.grid(row=14, column=6, padx=10, pady=15)
+bulletProf22s.grid(row=14, column=7, padx=10, pady=15)
 
-lab19 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 2", padx=10, pady=15)
+lab19 = tk.Label(scrollable_container.scrollable_frame, text="•  Point for the Role 2", padx=10, pady=15)
 lab19.grid(row=15, column=0, sticky="w")
 bulletProf23s = tk.Entry(scrollable_container.scrollable_frame)
 bulletProf23s.grid(row=15, column=1, padx=10, pady=15)
 
-lab20 = tk.Label(scrollable_container.scrollable_frame, text="Point for the Role 2", padx=10, pady=15)
-lab20.grid(row=15, column=3, sticky="w")
+lab20 = tk.Label(scrollable_container.scrollable_frame, text="•  Point for the Role 2", padx=10, pady=15)
+lab20.grid(row=15, column=4, sticky="w")
 bulletProf24s = tk.Entry(scrollable_container.scrollable_frame)
-bulletProf24s.grid(row=15, column=4, padx=10, pady=15)
+bulletProf24s.grid(row=15, column=5, padx=10, pady=15)
 
-lab21 = tk.Label(scrollable_container.scrollable_frame, text="Summary", padx=10, pady=15)
-lab21.grid(row=15, column=5, sticky="w")
+lab21 = tk.Label(scrollable_container.scrollable_frame, text="•  Summary", padx=10, pady=15)
+lab21.grid(row=15, column=6, sticky="w")
 summarys = tk.Entry(scrollable_container.scrollable_frame)
-summarys.grid(row=15, column=6, padx=10, pady=15)
+summarys.grid(row=15, column=7, padx=10, pady=15)
 
 
 #***********************************************************************************SKILL
 
 h16 = tk.Label(scrollable_container.scrollable_frame, text="Skills", padx=10, pady=15,font=("arial",15))
-h16.grid(row=16, column=0,columnspan=7,sticky="nsew")
+h16.grid(row=16, column=0,columnspan=8,sticky="nsew")
 
 
-lab34=tk.Label(scrollable_container.scrollable_frame,text="Skill 1 Name (if any)",padx=10,pady=15)
+lab34=tk.Label(scrollable_container.scrollable_frame,text="•  Skill 1 Name (if any)",padx=10,pady=15)
 lab34.grid(row=18,column=0,sticky="w")
 s1names=tk.Entry(scrollable_container.scrollable_frame)
 s1names.grid(row=18,column=1,padx=10,pady=15)
 
 
 
-lab35=tk.Label(scrollable_container.scrollable_frame,text="Skill 2 Name (if any)",padx=10,pady=15)
+lab35=tk.Label(scrollable_container.scrollable_frame,text="•  Skill 2 Name (if any)",padx=10,pady=15)
 lab35.grid(row=19,column=0,sticky="w")
 s2names=tk.Entry(scrollable_container.scrollable_frame)
 s2names.grid(row=19,column=1,padx=10,pady=15)
 
-lab36=tk.Label(scrollable_container.scrollable_frame,text="Skill 3 Name (if any)",padx=10,pady=15)
+lab36=tk.Label(scrollable_container.scrollable_frame,text="•  Skill 3 Name (if any)",padx=10,pady=15)
 lab36.grid(row=20,column=0,sticky="w")
 s3names=tk.Entry(scrollable_container.scrollable_frame)
 s3names.grid(row=20,column=1,padx=10,pady=15)
 
-lab37=tk.Label(scrollable_container.scrollable_frame,text="Skill 4 Name (if any)",padx=10,pady=15)
+lab37=tk.Label(scrollable_container.scrollable_frame,text="•  Skill 4 Name (if any)",padx=10,pady=15)
 lab37.grid(row=21,column=0,sticky="w")
 s4names=tk.Entry(scrollable_container.scrollable_frame)
 s4names.grid(row=21,column=1,padx=10,pady=15)
 
-lab38=tk.Label(scrollable_container.scrollable_frame,text="Skill 5 Name (if any)",padx=10,pady=15)
+lab38=tk.Label(scrollable_container.scrollable_frame,text="•  Skill 5 Name (if any)",padx=10,pady=15)
 lab38.grid(row=22,column=0,sticky="w")
 s5names=tk.Entry(scrollable_container.scrollable_frame)
 s5names.grid(row=22,column=1,padx=10,pady=15)
 
-lab39=tk.Label(scrollable_container.scrollable_frame,text="Skill 6 Name (if any)",padx=10,pady=15)
+lab39=tk.Label(scrollable_container.scrollable_frame,text="•  Skill 6 Name (if any)",padx=10,pady=15)
 lab39.grid(row=23,column=0,sticky="w")
 s6names=tk.Entry(scrollable_container.scrollable_frame)
 s6names.grid(row=23,column=1,padx=10,pady=15)
 
-lab40=tk.Label(scrollable_container.scrollable_frame,text="Skill 7 Name (if any)",padx=10,pady=15)
+lab40=tk.Label(scrollable_container.scrollable_frame,text="•  Skill 7 Name (if any)",padx=10,pady=15)
 lab40.grid(row=24,column=0,sticky="w")
 s7names=tk.Entry(scrollable_container.scrollable_frame)
 s7names.grid(row=24,column=1,padx=10,pady=15)
 
-lab41=tk.Label(scrollable_container.scrollable_frame,text="Skill 8 Name (if any)",padx=10,pady=15)
+lab41=tk.Label(scrollable_container.scrollable_frame,text="•  Skill 8 Name (if any)",padx=10,pady=15)
 lab41.grid(row=25,column=0,sticky="w")
 s8names=tk.Entry(scrollable_container.scrollable_frame)
 s8names.grid(row=25,column=1,padx=10,pady=15)
 
-lab351=tk.Label(scrollable_container.scrollable_frame,text="Level 1",padx=10,pady=15)
-lab351.grid(row=18,column=3)
+lab351=tk.Label(scrollable_container.scrollable_frame,text="•  Level 1",padx=10,pady=15)
+lab351.grid(row=18,column=4)
 s1vals=tk.Entry(scrollable_container.scrollable_frame)
-s1vals.grid(row=18,column=4,padx=10,pady=15)
+s1vals.grid(row=18,column=5,padx=10,pady=15)
 
-lab352=tk.Label(scrollable_container.scrollable_frame,text="Level 2",padx=10,pady=15)
-lab352.grid(row=19,column=3)
+lab352=tk.Label(scrollable_container.scrollable_frame,text="•  Level 2",padx=10,pady=15)
+lab352.grid(row=19,column=4)
 s2vals=tk.Entry(scrollable_container.scrollable_frame)
-s2vals.grid(row=19,column=4,padx=10,pady=15)
+s2vals.grid(row=19,column=5,padx=10,pady=15)
 
-lab353=tk.Label(scrollable_container.scrollable_frame,text="Level 3",padx=10,pady=15)
-lab353.grid(row=20,column=3)
+lab353=tk.Label(scrollable_container.scrollable_frame,text="•  Level 3",padx=10,pady=15)
+lab353.grid(row=20,column=4)
 s3vals=tk.Entry(scrollable_container.scrollable_frame)
-s3vals.grid(row=20,column=4,padx=10,pady=15)
+s3vals.grid(row=20,column=5,padx=10,pady=15)
 
-lab354=tk.Label(scrollable_container.scrollable_frame,text="Level 4",padx=10,pady=15)
-lab354.grid(row=21,column=3)
+lab354=tk.Label(scrollable_container.scrollable_frame,text="•  Level 4",padx=10,pady=15)
+lab354.grid(row=21,column=4)
 s4vals=tk.Entry(scrollable_container.scrollable_frame)
-s4vals.grid(row=21,column=4,padx=10,pady=15)
+s4vals.grid(row=21,column=5,padx=10,pady=15)
 
-lab355=tk.Label(scrollable_container.scrollable_frame,text="Level 5",padx=10,pady=15)
-lab355.grid(row=22,column=3)
+lab355=tk.Label(scrollable_container.scrollable_frame,text="•  Level 5",padx=10,pady=15)
+lab355.grid(row=22,column=4)
 s5vals=tk.Entry(scrollable_container.scrollable_frame)
-s5vals.grid(row=22,column=4,padx=10,pady=15)
+s5vals.grid(row=22,column=5,padx=10,pady=15)
 
-lab356=tk.Label(scrollable_container.scrollable_frame,text="Level 6",padx=10,pady=15)
-lab356.grid(row=23,column=3)
+lab356=tk.Label(scrollable_container.scrollable_frame,text="•  Level 6",padx=10,pady=15)
+lab356.grid(row=23,column=4)
 s6vals=tk.Entry(scrollable_container.scrollable_frame)
-s6vals.grid(row=23,column=4,padx=10,pady=15)
+s6vals.grid(row=23,column=5,padx=10,pady=15)
 
-lab357=tk.Label(scrollable_container.scrollable_frame,text="Level 7",padx=10,pady=15)
-lab357.grid(row=24,column=3)
+lab357=tk.Label(scrollable_container.scrollable_frame,text="•  Level 7",padx=10,pady=15)
+lab357.grid(row=24,column=4)
 s7vals=tk.Entry(scrollable_container.scrollable_frame)
-s7vals.grid(row=24,column=4,padx=10,pady=15)
+s7vals.grid(row=24,column=5,padx=10,pady=15)
 
-lab358=tk.Label(scrollable_container.scrollable_frame,text="Level 8",padx=10,pady=15)
-lab358.grid(row=25,column=3)
+lab358=tk.Label(scrollable_container.scrollable_frame,text="•  Level 8",padx=10,pady=15)
+lab358.grid(row=25,column=4)
 s8vals=tk.Entry(scrollable_container.scrollable_frame)
-s8vals.grid(row=25,column=4,padx=10,pady=15)
+s8vals.grid(row=25,column=5,padx=10,pady=15)
 
 # Certificates and Projects section
 h17 = tk.Label(scrollable_container.scrollable_frame, text="Your Achievements at a Glance ", padx=10, pady=15,font=("arial",15))
-h17.grid(row=26, column=0,columnspan=7,sticky="nsew")
+h17.grid(row=26, column=0,columnspan=8,sticky="nsew")
 
 lab42=tk.Label(scrollable_container.scrollable_frame,text="Certificate Name ",padx=10,pady=15)
 lab42.grid(row=27,column=0,sticky="w")
