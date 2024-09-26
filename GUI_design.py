@@ -32,12 +32,12 @@ class ScrollableFrame(ttk.Frame):
         self.grid_columnconfigure(0, weight=1)
 
         # Set a minimum size for the canvas to improve visibility
-        self.canvas.config(width=1255, height=600)  # Adjust dimensions as neededs
+        self.canvas.config(width=1255, height=650)  # Adjust dimensions as neededs
 # Create the main application window
 root = tk.Tk()
 root.configure(bg="#f4f4f9")
 root.title("Portfolio Craft Studio")
-root.geometry("1300x690")  # Increased height for more space
+root.geometry("1300x650")  # Increased height for more space
 
 # Add the scrollable frame
 scrollable_container = ScrollableFrame(root)
@@ -604,10 +604,15 @@ def gen():
 
     html_content = html_content.replace('<h4>commaSepSkill1</h4>', f'<h4>{commaSepSkill1}</h4>')
     html_content = html_content.replace('<h5>periodProf1</h5>', f'<h5>{periodProf1}</h5>')
-    html_content = html_content.replace('<li>bulletProf11</li>', f'<li>{bulletProf11}</li>')
-    html_content = html_content.replace('<li>bulletProf12</li>', f'<li>{bulletProf12}</li>')
-    html_content = html_content.replace('<li>bulletProf13</li>', f'<li>{bulletProf13}</li>')
-    html_content = html_content.replace('<li>bulletProf14</li>', f'<li>{bulletProf14}</li>')
+    if bulletProf11:
+      html_content = html_content.replace('<!-- <li>bulletProf11</li> -->', f'<li>{bulletProf11}</li>')
+    if bulletProf12:  
+      html_content = html_content.replace('<!-- <li>bulletProf12</li> -->', f'<li>{bulletProf12}</li>')
+    if bulletProf13:
+      html_content = html_content.replace('<!-- <li>bulletProf13</li> -->', f'<li>{bulletProf13}</li>')
+    if bulletProf14 : 
+      html_content = html_content.replace('<!-- <li>bulletProf14</li> -->', f'<li>{bulletProf14}</li>')
+  
 
     html_content = html_content.replace('<h4>commaSepSkill2</h4>', f'<h4>{commaSepSkill2}</h4>')
     html_content = html_content.replace('<h5>periodProf2</h5>', f'<h5>{periodProf2}</h5>')
@@ -615,6 +620,10 @@ def gen():
     html_content = html_content.replace('<li>bulletProf22</li>', f'<li>{bulletProf22}</li>')
     html_content = html_content.replace('<li>bulletProf23</li>', f'<li>{bulletProf23}</li>')
     html_content = html_content.replace('<li>bulletProf24</li>', f'<li>{bulletProf24}</li>')
+    # html_content = html_content.replace('<li>bulletProf21</li>', f'<li>{bulletProf21}</li>')
+    # html_content = html_content.replace('<li>bulletProf22</li>', f'<li>{bulletProf22}</li>')
+    # html_content = html_content.replace('<li>bulletProf23</li>', f'<li>{bulletProf23}</li>')
+    # html_content = html_content.replace('<li>bulletProf24</li>', f'<li>{bulletProf24}</li>')
     if cgpa:
       html_content=html_content.replace("<!-- wantcgpa -->",f"""<div class="col-lg-3 col-md-6">
             <div class="stats-item">
