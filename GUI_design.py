@@ -613,17 +613,17 @@ def gen():
     if bulletProf14 : 
       html_content = html_content.replace('<!-- <li>bulletProf14</li> -->', f'<li>{bulletProf14}</li>')
   
-
     html_content = html_content.replace('<h4>commaSepSkill2</h4>', f'<h4>{commaSepSkill2}</h4>')
     html_content = html_content.replace('<h5>periodProf2</h5>', f'<h5>{periodProf2}</h5>')
-    html_content = html_content.replace('<li>bulletProf21</li>', f'<li>{bulletProf21}</li>')
-    html_content = html_content.replace('<li>bulletProf22</li>', f'<li>{bulletProf22}</li>')
-    html_content = html_content.replace('<li>bulletProf23</li>', f'<li>{bulletProf23}</li>')
-    html_content = html_content.replace('<li>bulletProf24</li>', f'<li>{bulletProf24}</li>')
-    # html_content = html_content.replace('<li>bulletProf21</li>', f'<li>{bulletProf21}</li>')
-    # html_content = html_content.replace('<li>bulletProf22</li>', f'<li>{bulletProf22}</li>')
-    # html_content = html_content.replace('<li>bulletProf23</li>', f'<li>{bulletProf23}</li>')
-    # html_content = html_content.replace('<li>bulletProf24</li>', f'<li>{bulletProf24}</li>')
+    if bulletProf21:
+      html_content = html_content.replace('<!-- <li>bulletProf21</li> -->', f'<li>{bulletProf21}</li>')
+    if  bulletProf22:
+      html_content = html_content.replace('<!-- <li>bulletProf22</li> -->', f'<li>{bulletProf22}</li>')
+    if bulletProf23:
+      html_content = html_content.replace('<!-- <li>bulletProf23</li> -->', f'<li>{bulletProf23}</li>')
+    if bulletProf24:
+      html_content = html_content.replace('<!-- <li>bulletProf24</li> -->', f'<li>{bulletProf24}</li>')
+
     if cgpa:
       html_content=html_content.replace("<!-- wantcgpa -->",f"""<div class="col-lg-3 col-md-6">
             <div class="stats-item">
