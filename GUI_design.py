@@ -42,7 +42,7 @@ root.geometry("1300x650")  # Increased height for more space
 # Add the scrollable frame
 scrollable_container = ScrollableFrame(root)
 scrollable_container.grid(row=0, column=0, sticky="nsew")
-h11 = tk.Label(scrollable_container.scrollable_frame, text="ENTER DETAILS,GET PORTFOLIO", padx=10, pady=5,font=("arial",20,"bold"))
+h11 = tk.Label(scrollable_container.scrollable_frame, text="Portfolio Craft Studio", padx=10, pady=5,font=("arial",20,"bold"))
 h11.grid(row=0, column=0,columnspan=8,sticky="nsew")
 
 
@@ -627,7 +627,7 @@ def gen():
     if cgpa:
       html_content=html_content.replace("<!-- wantcgpa -->",f"""<div class="col-lg-3 col-md-6">
             <div class="stats-item">
-              <i class="bi bi-people"></i>
+              <i class="bi bi-star-fill"></i>
               <span data-purecounter-start="0" data-purecounter-end="{cgpa}" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>CGPA</strong> <span></span></p>
             </div>
