@@ -1,15 +1,16 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import font
 class ScrollableFrame(ttk.Frame):
     def __init__(self, container, *args, **kwargs):
         super().__init__(container, *args, **kwargs)
         
-        # Create a canvas
+  
         self.canvas = tk.Canvas(self)
         self.scrollbar = ttk.Scrollbar(self, orient="vertical", command=self.canvas.yview)
         self.scrollable_frame = ttk.Frame(self.canvas)
 
-        # Bind the configure event to adjust scroll region
+       
         self.scrollable_frame.bind(
             "<Configure>",
             lambda e: self.canvas.configure(
@@ -17,32 +18,34 @@ class ScrollableFrame(ttk.Frame):
             )
         )
 
-        # Create a window inside the canvas for the scrollable frame
+        
         self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
 
-        # Configure the canvas to work with the scrollbar
+        
         self.canvas.configure(yscrollcommand=self.scrollbar.set)
 
-        # Grid everything
+     
         self.canvas.grid(row=0, column=0, sticky="nsew")
         self.scrollbar.grid(row=0, column=1, sticky="ns")
 
-        # Allow the frame to expand
+      
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
-        # Set a minimum size for the canvas to improve visibility
-        self.canvas.config(width=1255, height=650)  # Adjust dimensions as neededs
-# Create the main application window
+        
+        self.canvas.config(width=1255, height=650)  
+
 root = tk.Tk()
 root.configure(bg="#f4f4f9")
 root.title("Portfolio Craft Studio")
 root.geometry("1300x650")  # Increased height for more space
+underlined_font = font.Font(family="Arial", size=15, underline=True)
+underlined_font2 = font.Font(family="Arial", size=20, weight="bold")
 
 # Add the scrollable frame
 scrollable_container = ScrollableFrame(root)
 scrollable_container.grid(row=0, column=0, sticky="nsew")
-h11 = tk.Label(scrollable_container.scrollable_frame, text="Portfolio Craft Studio", padx=10, pady=5,font=("arial",20,"bold"))
+h11 = tk.Label(scrollable_container.scrollable_frame, text="✥ PORTFOLIO CRAFT STUDIO ✥", padx=10, pady=5,font=underlined_font2)
 h11.grid(row=0, column=0,columnspan=8,sticky="nsew")
 
 
@@ -52,7 +55,7 @@ h11.grid(row=0, column=0,columnspan=8,sticky="nsew")
 
 #**************************************personal
 
-h12 = tk.Label(scrollable_container.scrollable_frame, text="Personal details", padx=10, pady=5,font=("arial",15))
+h12 = tk.Label(scrollable_container.scrollable_frame, text="PERSONAL DETAILS", padx=10, pady=15,font=underlined_font)
 h12.grid(row=1, column=0,columnspan=8,sticky="nsew")
 
 
@@ -112,7 +115,7 @@ degrees.grid(row=4, column=7, padx=10, pady=15)
 
 
 #********************************************education
-h13 = tk.Label(scrollable_container.scrollable_frame, text="Educational Details", padx=10, pady=15,font=("arial",15))
+h13 = tk.Label(scrollable_container.scrollable_frame, text="EDUCATIONAL  DETAILS", padx=10, pady=15,font=underlined_font)
 h13.grid(row=5, column=0,columnspan=8,sticky="nsew")
 
 
@@ -151,7 +154,7 @@ education_journeys.grid(row=7,column=7,padx=10,pady=15)
 
 #*******************************************************LINKS
 
-h14 = tk.Label(scrollable_container.scrollable_frame, text="Social Media Link", padx=10, pady=15,font=("arial",15))
+h14 = tk.Label(scrollable_container.scrollable_frame, text="SOCAIL MEDIA LINKS", padx=10, pady=15,font=underlined_font)
 h14.grid(row=8, column=0,columnspan=8,sticky="nsew")
 
 
@@ -176,13 +179,13 @@ lab24.grid(row=10, column=0, sticky="w")
 instagram_links = tk.Entry(scrollable_container.scrollable_frame)
 instagram_links.grid(row=10, column=1, padx=10, pady=15)
 
-lab241 = tk.Label(scrollable_container.scrollable_frame, text="•  Location link", padx=10, pady=15)
+lab241 = tk.Label(scrollable_container.scrollable_frame, text="•  Location link (Embed Link)", padx=10, pady=15)
 lab241.grid(row=10, column=4, sticky="w")
 location_links = tk.Entry(scrollable_container.scrollable_frame)
 location_links.grid(row=10, column=5, padx=10, pady=15)
 
 #****************************************************professional details
-h15 = tk.Label(scrollable_container.scrollable_frame, text="Professional Summary", padx=10, pady=15,font=("arial",15))
+h15 = tk.Label(scrollable_container.scrollable_frame, text="PROFESSIONAL SUMMARY", padx=10, pady=15,font=underlined_font)
 h15.grid(row=11, column=0,columnspan=8,sticky="nsew")
 
 
@@ -253,7 +256,7 @@ summarys.grid(row=15, column=7, padx=10, pady=15)
 
 #***********************************************************************************SKILL
 
-h16 = tk.Label(scrollable_container.scrollable_frame, text="Skills", padx=10, pady=15,font=("arial",15))
+h16 = tk.Label(scrollable_container.scrollable_frame, text="SKILLS", padx=10, pady=15,font=underlined_font)
 h16.grid(row=16, column=0,columnspan=8,sticky="nsew")
 
 
@@ -340,7 +343,7 @@ s8vals=tk.Entry(scrollable_container.scrollable_frame)
 s8vals.grid(row=25,column=5,padx=10,pady=15)
 
 # Certificates and Projects section
-h17 = tk.Label(scrollable_container.scrollable_frame, text="Your Achievements at a Glance ", padx=10, pady=15,font=("arial",15))
+h17 = tk.Label(scrollable_container.scrollable_frame, text="YOUR ACHIEVEMENT AT A GLANCE", padx=10, pady=15,font=underlined_font)
 h17.grid(row=26, column=0,columnspan=8,sticky="nsew")
 
 lab42=tk.Label(scrollable_container.scrollable_frame,text="•  Certificate Name ",padx=10,pady=15)
@@ -380,10 +383,6 @@ cgpas.grid(row=29,column=1,padx=10,pady=15,sticky="w")
 
 #_______________________________________________________________________________________
 
-# lab523=tk.Label(scrollable_container.scrollable_frame,text="•  ",padx=10,pady=15)
-# lab523.grid(row=29,column=0)
-# pro3names=tk.Entry(scrollable_container.scrollable_frame)
-# pro3names.grid(row=28,column=6,padx=10,pady=15)
 #_______________________________________________________________________________________
 
 def gen():
@@ -685,7 +684,7 @@ def gen():
         css_towrite.write(css_content)
     print(f"{name} css created succesfully") 
 #___________________________________________________________________________________________
-btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="#f04d20",command=gen, fg="#ffffff")
+btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="#342E27",command=gen, fg="white")
 btn.grid(row=30, column=4,columnspan=2,sticky="nsew",pady=10)
 
 root.mainloop()
