@@ -623,15 +623,24 @@ def gen():
       html_content = html_content.replace('<!-- <li>bulletProf23</li> -->', f'<li>{bulletProf23}</li>')
     if bulletProf24:
       html_content = html_content.replace('<!-- <li>bulletProf24</li> -->', f'<li>{bulletProf24}</li>')
-
     if cgpa:
-      html_content=html_content.replace("<!-- wantcgpa -->",f"""<div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-star-fill"></i>
-              <span data-purecounter-start="0" data-purecounter-end="{cgpa}" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>CGPA</strong> <span></span></p>
-            </div>
-          </div>""")
+      if int(cgpa)<7:
+        html_content=html_content.replace("<!-- wantcgpa -->",f"""<div class="col-lg-3 col-md-6">
+              <div class="stats-item">
+                <i class="bi bi-star-half"></i>
+                <span data-purecounter-start="0" data-purecounter-end="{cgpa}" data-purecounter-duration="1" class="purecounter"></span>
+                <p><strong>CGPA</strong> <span></span></p>
+              </div>
+            </div>""")
+      else:
+        html_content=html_content.replace("<!-- wantcgpa -->",f"""<div class="col-lg-3 col-md-6">
+              <div class="stats-item">
+                <i class="bi bi-star-fill"></i>
+                <span data-purecounter-start="0" data-purecounter-end="{cgpa}" data-purecounter-duration="1" class="purecounter"></span>
+                <p><strong>CGPA</strong> <span></span></p>
+              </div>
+            </div>""")
+         
     css_name=f"{name}.css"
     html_content=html_content.replace('<link href="main.css" rel="stylesheet">',f"""<link href="{css_name}" rel="stylesheet">""")      
 
