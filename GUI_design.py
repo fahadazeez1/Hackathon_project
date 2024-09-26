@@ -372,6 +372,12 @@ lab52=tk.Label(scrollable_container.scrollable_frame,text="•  Project name 3 (
 lab52.grid(row=28,column=6,sticky="w")
 pro3names=tk.Entry(scrollable_container.scrollable_frame)
 pro3names.grid(row=28,column=7,padx=10,pady=15,sticky="w")
+
+lab53=tk.Label(scrollable_container.scrollable_frame,text="•  CGPA (optional)",padx=10,pady=15)
+lab53.grid(row=29,column=0,sticky="w")
+cgpas=tk.Entry(scrollable_container.scrollable_frame)
+cgpas.grid(row=29,column=1,padx=10,pady=15,sticky="w")
+
 #_______________________________________________________________________________________
 
 # lab523=tk.Label(scrollable_container.scrollable_frame,text="•  ",padx=10,pady=15)
@@ -422,6 +428,8 @@ def gen():
     projects=[item for item in projectss if item]
     num_projectss=len(projects)
     num_projects=len(projects)
+    cgpa=cgpas.get()
+
 
    
     skillNexp=[s1names.get(),s2names.get(),s3names.get(),s4names.get(),s5names.get(),s6names.get(),s7names.get(),s8names.get()]
@@ -429,9 +437,7 @@ def gen():
     num_skills=len(skills)
     skillLexp=[s1vals.get(),s2vals.get(),s3vals.get(),s4vals.get(),s5vals.get(),s6vals.get(),s7vals.get(),s8vals.get()]
     levels=[item for item in skillLexp if item]
-    print("x:", skills)
-    print("y:", levels)
-    print("z:", projects)
+  
     with open("updated_index.html", "r") as file:
         html_content = file.read()
 
@@ -608,7 +614,15 @@ def gen():
     html_content = html_content.replace('<li>bulletProf22</li>', f'<li>{bulletProf22}</li>')
     html_content = html_content.replace('<li>bulletProf23</li>', f'<li>{bulletProf23}</li>')
     html_content = html_content.replace('<li>bulletProf24</li>', f'<li>{bulletProf24}</li>')
+    if cgpa:
 
+      html_content=html_content.replace("<!-- wantcgpa -->",f"""<div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="{cgpa}" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>CGPA</strong> <span></span></p>
+            </div>
+          </div>""")
 
     html_content = html_content.replace('<p>addCon</p>', f'<p>{address}</p>')
     html_content = html_content.replace('<p>mobCon</p>', f'<p>{mobile_num}</p>')
