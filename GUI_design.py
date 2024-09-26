@@ -37,7 +37,7 @@ class ScrollableFrame(ttk.Frame):
 root = tk.Tk()
 root.configure(bg="#f4f4f9")
 root.title("Portfolio Craft Studio")
-root.geometry("1300x600")  # Increased height for more space
+root.geometry("1300x690")  # Increased height for more space
 
 # Add the scrollable frame
 scrollable_container = ScrollableFrame(root)
@@ -437,7 +437,8 @@ def gen():
     num_skills=len(skills)
     skillLexp=[s1vals.get(),s2vals.get(),s3vals.get(),s4vals.get(),s5vals.get(),s6vals.get(),s7vals.get(),s8vals.get()]
     levels=[item for item in skillLexp if item]
-  
+    with open("main.css","r") as css:
+        css_content=css.read()
     with open("updated_index.html", "r") as file:
         html_content = file.read()
 
@@ -615,7 +616,6 @@ def gen():
     html_content = html_content.replace('<li>bulletProf23</li>', f'<li>{bulletProf23}</li>')
     html_content = html_content.replace('<li>bulletProf24</li>', f'<li>{bulletProf24}</li>')
     if cgpa:
-
       html_content=html_content.replace("<!-- wantcgpa -->",f"""<div class="col-lg-3 col-md-6">
             <div class="stats-item">
               <i class="bi bi-people"></i>
@@ -623,6 +623,8 @@ def gen():
               <p><strong>CGPA</strong> <span></span></p>
             </div>
           </div>""")
+    css_name=f"{name}.css"
+    html_content=html_content.replace('<link href="main.css" rel="stylesheet">',f"""<link href="{css_name}" rel="stylesheet">""")      
 
     html_content = html_content.replace('<p>addCon</p>', f'<p>{address}</p>')
     html_content = html_content.replace('<p>mobCon</p>', f'<p>{mobile_num}</p>')
@@ -652,19 +654,20 @@ def gen():
     html_content = replace_social_media_placeholder(html_content, "Instagram", "linkinsta", "instagram", "bi-instagram", instagram_link)
     html_content = replace_social_media_placeholder(html_content, "GitHub", "linkgit", "github", "bi-github", github_link)
     html_content = replace_social_media_placeholder(html_content, "LinkedIn", "linklink", "linkedin", "bi-linkedin", linkedin_link)    
-
+    
 
 
     file_name = f"{name.lower()}'s portfolio.html"
-
+    
       # Writing the modified content to the new file
     with open(file_name, "w") as new_file:
         new_file.write(html_content)
     print(f"{name} portfolio created succesfully") 
-
-
+    with open(css_name,"w") as css_towrite:
+        css_towrite.write(css_content)
+    print(f"{name} css created succesfully") 
 #___________________________________________________________________________________________
-btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="#ced6e0",command=gen, fg="#ffffff")
+btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="#f04d20",command=gen, fg="#ffffff")
 btn.grid(row=30, column=4,columnspan=2,sticky="nsew",pady=10)
 
 root.mainloop()
