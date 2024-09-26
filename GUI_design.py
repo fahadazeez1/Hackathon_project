@@ -196,7 +196,7 @@ lab11.grid(row=12, column=4, sticky="w")
 periodProf1s = tk.Entry(scrollable_container.scrollable_frame)
 periodProf1s.grid(row=12, column=5, padx=10, pady=15)
 
-lab16 = tk.Label(scrollable_container.scrollable_frame, text="•  period of your first role", padx=10, pady=15)
+lab16 = tk.Label(scrollable_container.scrollable_frame, text="•  period of your second role", padx=10, pady=15)
 lab16.grid(row=12, column=6, sticky="w")
 periodProf2s = tk.Entry(scrollable_container.scrollable_frame)
 periodProf2s.grid(row=12, column=7, padx=10, pady=15)
