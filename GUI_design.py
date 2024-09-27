@@ -438,7 +438,7 @@ def gen():
     levels=[item for item in skillLexp if item]
     with open("main.css","r") as css:
         css_content=css.read()
-    with open("updated_index.html", "r") as file:
+    with open("index.html", "r") as file:
         html_content = file.read()
 
     def replace_social_media_placeholder(html_content, platform, placeholder, class_name, icon_class, link):
