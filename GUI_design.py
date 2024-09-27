@@ -464,30 +464,30 @@ def gen():
         replacements2 += [
         '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="p21.png" class="img-fluid" alt="">
+                <img src="assets/img/p21.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{}</h4>
-                  <a href="p21.png" title="Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link">
+                  <a href="assets/img/p21.png" title="Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link">
                     <i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div>'''.format(projects[0]),
         '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="p22.png" class="img-fluid" alt="">
+                <img src="assets/img/p22.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{}</h4>
-                  <a href="p22.png" title="Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link">
+                  <a href="assets/img/p22.png" title="Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link">
                     <i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div>'''.format(projects[0]),
         '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="p23.png" class="img-fluid" alt="">
+                <img src="assets/img/p23.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{}</h4>
-                  <a href="p23.png" title="Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link">
+                  <a href="assets/img/p23.png" title="Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link">
                     <i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
@@ -498,30 +498,30 @@ def gen():
         replacements2 += [
         '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="p11.png" class="img-fluid" alt="">
+                <img src="assets/img/p11.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{}</h4>
-                  <a href="p11.png" title="Project" data-gallery="portfolio-gallery-product" class="glightbox preview-link">
+                  <a href="assets/img/p11.png" title="Project" data-gallery="portfolio-gallery-product" class="glightbox preview-link">
                     <i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div>'''.format(projects[1]),
         '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="p12.png" class="img-fluid" alt="">
+                <img src="assets/img/p12.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{}</h4>
-                  <a href="p12.png" title="Project" data-gallery="portfolio-gallery-product" class="glightbox preview-link">
+                  <a href="assets/img/p12.png" title="Project" data-gallery="portfolio-gallery-product" class="glightbox preview-link">
                     <i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div>'''.format(projects[1]),
         '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="p13.png" class="img-fluid" alt="">
+                <img src="assets/img/p13.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{}</h4>
-                  <a href="p13.png" title="Project" data-gallery="portfolio-gallery-product" class="glightbox preview-link">
+                  <a href="assets/img/p13.png" title="Project" data-gallery="portfolio-gallery-product" class="glightbox preview-link">
                     <i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
@@ -532,30 +532,30 @@ def gen():
         replacements2 += [
         '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
               <div class="portfolio-content h-100">
-                <img src="p31.png" class="img-fluid" alt="">
+                <img src="assets/img/p31.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{}</h4>
-                  <a href="p31.png" title="Project" data-gallery="portfolio-gallery-book" class="glightbox preview-link">
+                  <a href="assets/img/p31.png" title="Project" data-gallery="portfolio-gallery-book" class="glightbox preview-link">
                     <i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div>'''.format(projects[2]),
         '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
               <div class="portfolio-content h-100">
-                <img src="p32.png" class="img-fluid" alt="">
+                <img src="assets/img/p32.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{}</h4>
-                  <a href="p32.png" title="Project" data-gallery="portfolio-gallery-book" class="glightbox preview-link">
+                  <a href="assets/img/p32.png" title="Project" data-gallery="portfolio-gallery-book" class="glightbox preview-link">
                     <i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div>'''.format(projects[2]),
         '''<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
               <div class="portfolio-content h-100">
-                <img src="p33.png" class="img-fluid" alt="">
+                <img src="assets/img/p33.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{}</h4>
-                  <a href="p33.png" title="Project" data-gallery="portfolio-gallery-book" class="glightbox preview-link">
+                  <a href="assets/img/p33.png" title="Project" data-gallery="portfolio-gallery-book" class="glightbox preview-link">
                     <i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
