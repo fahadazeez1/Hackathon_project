@@ -189,7 +189,7 @@ h15 = tk.Label(scrollable_container.scrollable_frame, text="PROFESSIONAL SUMMARY
 h15.grid(row=11, column=0,columnspan=8,sticky="nsew")
 
 
-lab10 = tk.Label(scrollable_container.scrollable_frame, text="•  Role (comma separated)", padx=10, pady=15)
+lab10 = tk.Label(scrollable_container.scrollable_frame, text="•  Roles (comma separated)", padx=10, pady=15)
 lab10.grid(row=12, column=0, sticky="w")
 roles = tk.Entry(scrollable_container.scrollable_frame)
 roles.grid(row=12, column=1, padx=10, pady=15)
@@ -395,6 +395,7 @@ def gen():
     degree=degrees.get()
     hobbies=hobbiess.get()
     role=roles.get()
+    rolee = role.split(",")
     periodProf1=periodProf1s.get()
     bulletProf11=bulletProf11s.get()
     bulletProf12=bulletProf12s.get()
@@ -405,8 +406,11 @@ def gen():
     bulletProf22=bulletProf22s.get()
     bulletProf23=bulletProf23s.get()
     bulletProf24=bulletProf24s.get()
-    commaSepSkill1 = role.split(",")[0]
-    commaSepSkill2 = role.split(",")[1]
+    commaSepSkill1 = rolee[0] if len(rolee)>0 else None
+    commaSepSkill2 = rolee[1] if len(rolee) >1 else None
+    commaSepSkill3 = rolee[2] if len(rolee) >2 else None
+    # commaSepSkill1 = role.split(",")[0]
+    # commaSepSkill2 = role.split(",")[1]
     cert_name=cirtnames.get()
     num_certificates=cirtnums.get()
     num_coding_langs=num_coding_langss.get()
@@ -676,7 +680,7 @@ def gen():
 
     file_name = f"{name.lower()}'s portfolio.html"
     
-      # Writing the modified content to the new file
+ 
     with open(file_name, "w") as new_file:
         new_file.write(html_content)
     print(f"{name} portfolio created succesfully") 
