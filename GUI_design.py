@@ -691,4 +691,12 @@ def gen():
 btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="#342E27",command=gen, fg="white")
 btn.grid(row=30, column=4,columnspan=2,sticky="nsew",pady=10)
 
+
+
+
+
+
+
+
+
 root.mainloop()
