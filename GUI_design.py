@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import font
+import webbrowser
 class ScrollableFrame(ttk.Frame):
     def __init__(self, container, *args, **kwargs):
         super().__init__(container, *args, **kwargs)
@@ -687,6 +688,7 @@ def gen():
     with open(css_name,"w") as css_towrite:
         css_towrite.write(css_content)
     print(f"{name} css created succesfully") 
+    webbrowser.open(file_name)
 #___________________________________________________________________________________________
 btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="#342E27",command=gen, fg="white")
 btn.grid(row=30, column=4,columnspan=2,sticky="nsew",pady=10)
