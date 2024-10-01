@@ -2,6 +2,12 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import font
 import webbrowser
+from tkinter import filedialog
+import shutil
+import os
+
+
+
 class ScrollableFrame(ttk.Frame):
     def __init__(self, container, *args, **kwargs):
         super().__init__(container, *args, **kwargs)
@@ -381,7 +387,34 @@ lab53=tk.Label(scrollable_container.scrollable_frame,text="•  CGPA (optional)"
 lab53.grid(row=29,column=0,sticky="w")
 cgpas=tk.Entry(scrollable_container.scrollable_frame)
 cgpas.grid(row=29,column=1,padx=10,pady=15,sticky="w")
+def upload_image(event):
+    # Open file dialog to select an image
+    file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
+    if file_path:
+        # Define the directory and file name
+        directory = os.path.join(os.getcwd(), 'assets', 'img')
+        if not os.path.exists(directory):
+            os.makedirs(directory)  # Create the directory if it doesn't exist
+        
+        # Define the destination path with the new name 'main1.png'
+        destination_path = os.path.join(directory, 'main2.png')
+        
+        # Copy the image to the specified directory with the new name
+        shutil.copy(file_path, destination_path)
 
+        # Update the entry field with the new image path
+        entry_field.delete(0, tk.END)  # Clear existing text
+        entry_field.insert(0, destination_path)  # Insert the new path
+
+        # Inform the user that the image has been saved
+        print(f"Image saved as: {destination_path}")
+        # Inform the user that the image has been saved
+        print(f"Image saved at: {destination_path}")
+entry_field = tk.Entry(scrollable_container.scrollable_frame)
+entry_field.grid(row=30,column=1,padx=10,pady=15,sticky="w")
+entry_field.bind("<Double-Button-1>", upload_image)
+lab54=tk.Label(scrollable_container.scrollable_frame,text="•  Main Image")
+lab54.grid(row=30,column=0,sticky="w")
 #_______________________________________________________________________________________
 
 #_______________________________________________________________________________________
@@ -691,7 +724,7 @@ def gen():
     webbrowser.open(file_name)
 #___________________________________________________________________________________________
 btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="#342E27",command=gen, fg="white")
-btn.grid(row=30, column=4,columnspan=2,sticky="nsew",pady=10)
+btn.grid(row=31, column=4,columnspan=2,sticky="nsew",pady=10)
 
 
 
