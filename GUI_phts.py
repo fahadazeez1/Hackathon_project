@@ -589,7 +589,7 @@ lab55.grid(row=5,column=4,sticky="w" ,padx=10,pady=15)
 
 entry_field3 = tk.Entry(scrollable_container.scrollable_frame)
 entry_field3.grid(row=5,column=7,padx=10,pady=15,sticky="w")
-entry_field.bind("<Double-Button-1>", upload_image3)
+entry_field3.bind("<Double-Button-1>", upload_image3)
 lab54=tk.Label(scrollable_container.scrollable_frame,text="•  Main Image 3")
 lab54.grid(row=5,column=6,sticky="w" ,padx=10,pady=15)
 
