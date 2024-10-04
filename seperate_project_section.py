@@ -35,7 +35,7 @@ def update_input_fields(selection):
 
 # Main window
 root = tk.Tk()
-root.geometry('400x400')
+root.geometry('800x600')
 root.title("Dynamic Input Fields with Project Name and Photos")
 
 # Dropdown options
@@ -50,8 +50,11 @@ dropdown.pack(pady=10)
 input_frame = tk.Frame(root)
 input_frame.pack()
 
-# Initial display of input fields
+
+
 update_input_fields(selected_option.get())
 
-# Run the Tkinter main loop
+
+
+
 root.mainloop()
