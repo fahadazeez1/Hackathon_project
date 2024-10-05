@@ -54,12 +54,8 @@ def select_photo(project_num, photo_num):
 
 # Main window
 root = tk.Tk()
-<<<<<<< HEAD
 root.geometry('600x600')  # Larger window to fit all fields comfortably
 root.resizable(True, True)  # Allow window resizing
-=======
-root.geometry('800x600')
->>>>>>> c0d05ce79822c271fd60a939dc14ab7d5a25831f
 root.title("Dynamic Input Fields with Project Name and Photos")
 
 # Dropdown options
@@ -74,11 +70,8 @@ dropdown.pack(pady=10)
 input_frame = tk.Frame(root)
 input_frame.pack()
 
-
-
+# Initial display of input fields
 update_input_fields(selected_option.get())
 
-
-
-
+# Run the Tkinter main loop
 root.mainloop()
