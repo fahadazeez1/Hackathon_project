@@ -1,4 +1,10 @@
 import tkinter as tk
+from tkinter import filedialog
+import shutil
+import os
+
+# Path to existing directory
+target_directory = 'assets/img'
 
 def update_input_fields(selection):
     # Clear the existing fields
@@ -19,23 +25,37 @@ def update_input_fields(selection):
     for project_num in range(1, num_projects + 1):
         # Project Name Label and Entry
         project_label = tk.Label(input_frame, text=f"Project {project_num} Name:")
-        project_label.grid(row=0, column=project_num - 1, sticky='w', padx=10, pady=15)
+        project_label.grid(row=0, column=project_num - 1, sticky='w', padx=10, pady=5)
         
         project_entry = tk.Entry(input_frame)
-        project_entry.grid(row=1, column=project_num - 1, padx=10, pady=15)
+        project_entry.grid(row=1, column=project_num - 1, padx=10, pady=5)
         
         # Create 3 Photo input fields for each project
         for photo_num in range(1, 4):
             label_text = f"photo {photo_num} of project {project_num}"
             photo_label = tk.Label(input_frame, text=label_text)
-            photo_label.grid(row=photo_num * 2, column=project_num - 1, sticky='w', padx=10, pady=15)
+            photo_label.grid(row=photo_num * 2, column=project_num - 1, sticky='w', padx=10, pady=5)
             
-            photo_entry = tk.Entry(input_frame)
-            photo_entry.grid(row=photo_num * 2 + 1, column=project_num - 1, padx=10, pady=15)
+            # Photo Upload Button
+            photo_button = tk.Button(input_frame, text="Select Photo", command=lambda p=project_num, n=photo_num: select_photo(p, n))
+            photo_button.grid(row=photo_num * 2 + 1, column=project_num - 1, padx=10, pady=5)
+
+def select_photo(project_num, photo_num):
+    # Open file dialog to select photo
+    file_path = filedialog.askopenfilename(filetypes=[("Image Files", "*.png;*.jpg;*.jpeg")])
+    if file_path:
+        # Create the filename in the required format
+        new_filename = f"p{project_num}{photo_num}.png"
+        dest_path = os.path.join(target_directory, new_filename)
+        
+        # Copy the selected file to the destination path
+        shutil.copy(file_path, dest_path)
+        print(f"Saved {new_filename} to {target_directory}")
 
 # Main window
 root = tk.Tk()
-root.geometry('400x400')
+root.geometry('600x600')  # Larger window to fit all fields comfortably
+root.resizable(True, True)  # Allow window resizing
 root.title("Dynamic Input Fields with Project Name and Photos")
 
 # Dropdown options
