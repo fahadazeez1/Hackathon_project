@@ -361,12 +361,12 @@ cirtnames.grid(row=28,column=1,padx=10,pady=15)
 lab43=tk.Label(scrollable_container.scrollable_frame,text="•  Num of Certificates",padx=10,pady=15)
 lab43.grid(row=28,column=3,sticky="w")
 cirtnums=tk.Entry(scrollable_container.scrollable_frame)
-cirtnums.grid(row=28,column=5,padx=10,pady=15)
+cirtnums.grid(row=28,column=4,padx=10,pady=15)
 
 lab44=tk.Label(scrollable_container.scrollable_frame,text="•  Num of Languages ",padx=10,pady=15)
 lab44.grid(row=28,column=6,sticky="w")
 num_coding_langss=tk.Entry(scrollable_container.scrollable_frame)
-num_coding_langss.grid(row=28,column=7,padx=10,pady=15)
+num_coding_langss.grid(row=28,column=7,padx=19,pady=15)
 
 lab50=tk.Label(scrollable_container.scrollable_frame,text="•  Project Name 1 (if any)",padx=10,pady=15)
 lab50.grid(row=29,column=0,sticky="w")
@@ -376,7 +376,7 @@ pro1names.grid(row=29,column=1,padx=10,pady=15,sticky="w")
 lab51=tk.Label(scrollable_container.scrollable_frame,text="•  Project Name 2 (if any)",padx=10,pady=15)
 lab51.grid(row=29,column=3,sticky="w")
 pro2names=tk.Entry(scrollable_container.scrollable_frame)
-pro2names.grid(row=29,column=5,padx=10,pady=15,sticky="w")
+pro2names.grid(row=29,column=4,padx=10,pady=15,sticky="w")
 
 lab52=tk.Label(scrollable_container.scrollable_frame,text="•  Project Name 3 (if any)",padx=10,pady=15)
 lab52.grid(row=29,column=6,sticky="w")
@@ -384,9 +384,9 @@ pro3names=tk.Entry(scrollable_container.scrollable_frame)
 pro3names.grid(row=29,column=7,padx=10,pady=15,sticky="w")
 
 lab53=tk.Label(scrollable_container.scrollable_frame,text="•  CGPA (optional)",padx=10,pady=15)
-lab53.grid(row=30,column=0,sticky="w")
+lab53.grid(row=35,column=0,sticky="w")
 cgpas=tk.Entry(scrollable_container.scrollable_frame)
-cgpas.grid(row=30,column=1,padx=10,pady=15,sticky="w")
+cgpas.grid(row=35,column=1,padx=10,pady=15,sticky="w")
 
 
 def upload_image1(event):
@@ -518,6 +518,228 @@ lab54.grid(row=5,column=6,sticky="w" ,padx=10,pady=15)
 
 
 #_______________________________________________________________________________________
+def upload_imagep11(event):
+    
+    file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
+    if file_path:
+       
+        directory = os.path.join(os.getcwd(), 'assets', 'img')
+        if not os.path.exists(directory):
+            os.makedirs(directory)         
+        destination_path = os.path.join(directory, 'p21.png')
+        shutil.copy(file_path, destination_path)
+        entry_field.delete(0, tk.END)  
+        entry_field.insert(0, destination_path)
+        print(f"Image saved as: {destination_path}")
+        print(f"Image saved at: {destination_path}")
+
+
+entry_fieldp11 = tk.Entry(scrollable_container.scrollable_frame)
+entry_fieldp11.grid(row=32,column=1,padx=10,pady=15,sticky="w")
+entry_fieldp11.bind("<Double-Button-1>", upload_imagep11)
+lab55=tk.Label(scrollable_container.scrollable_frame,text="•  project image 1")
+lab55.grid(row=32,column=0,sticky="w" ,padx=10,pady=15)
+
+
+
+def upload_imagep12(event):
+    
+    file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
+    if file_path:
+       
+        directory = os.path.join(os.getcwd(), 'assets', 'img')
+        if not os.path.exists(directory):
+            os.makedirs(directory)         
+        destination_path = os.path.join(directory, 'p22.png')
+        shutil.copy(file_path, destination_path)
+        entry_field.delete(0, tk.END)  
+        entry_field.insert(0, destination_path)
+        print(f"Image saved as: {destination_path}")
+        print(f"Image saved at: {destination_path}")
+
+
+
+
+entry_fieldp12 = tk.Entry(scrollable_container.scrollable_frame)
+entry_fieldp12.grid(row=32,column=4,padx=10,pady=15,sticky="w")
+entry_fieldp12.bind("<Double-Button-1>", upload_imagep12)
+lab56=tk.Label(scrollable_container.scrollable_frame,text="•  project image 1")
+lab56.grid(row=32,column=3,sticky="w" ,padx=10,pady=15)
+
+
+
+
+def upload_imagep13(event):
+    
+    file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
+    if file_path:
+       
+        directory = os.path.join(os.getcwd(), 'assets', 'img')
+        if not os.path.exists(directory):
+            os.makedirs(directory)         
+        destination_path = os.path.join(directory, 'p23.png')
+        shutil.copy(file_path, destination_path)
+        entry_field.delete(0, tk.END)  
+        entry_field.insert(0, destination_path)
+        print(f"Image saved as: {destination_path}")
+        print(f"Image saved at: {destination_path}")
+
+
+entry_fieldp13 = tk.Entry(scrollable_container.scrollable_frame)
+entry_fieldp13.grid(row=32,column=7,padx=10,pady=15,sticky="w")
+entry_fieldp13.bind("<Double-Button-1>", upload_imagep13)
+lab57=tk.Label(scrollable_container.scrollable_frame,text="•  project image 1")
+lab57.grid(row=32,column=6,sticky="w" ,padx=10,pady=15)
+
+
+
+
+def upload_imagep21(event):
+    
+    file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
+    if file_path:
+       
+        directory = os.path.join(os.getcwd(), 'assets', 'img')
+        if not os.path.exists(directory):
+            os.makedirs(directory)         
+        destination_path = os.path.join(directory, 'p11.png')
+        shutil.copy(file_path, destination_path)
+        entry_field.delete(0, tk.END)  
+        entry_field.insert(0, destination_path)
+        print(f"Image saved as: {destination_path}")
+        print(f"Image saved at: {destination_path}")
+
+entry_fieldp12 = tk.Entry(scrollable_container.scrollable_frame)
+entry_fieldp12.grid(row=33,column=1,padx=10,pady=15,sticky="w")
+entry_fieldp12.bind("<Double-Button-1>", upload_imagep21)
+lab56=tk.Label(scrollable_container.scrollable_frame,text="•  project image 21")
+lab56.grid(row=33,column=0,sticky="w" ,padx=10,pady=15)
+
+
+def upload_imagep22(event):
+    
+    file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
+    if file_path:
+       
+        directory = os.path.join(os.getcwd(), 'assets', 'img')
+        if not os.path.exists(directory):
+            os.makedirs(directory)         
+        destination_path = os.path.join(directory, 'p12.png')
+        shutil.copy(file_path, destination_path)
+        entry_field.delete(0, tk.END)  
+        entry_field.insert(0, destination_path)
+        print(f"Image saved as: {destination_path}")
+        print(f"Image saved at: {destination_path}")
+
+entry_fieldp12 = tk.Entry(scrollable_container.scrollable_frame)
+entry_fieldp12.grid(row=33,column=4,padx=10,pady=15,sticky="w")
+entry_fieldp12.bind("<Double-Button-1>", upload_imagep22)
+lab56=tk.Label(scrollable_container.scrollable_frame,text="•  project image 22")
+lab56.grid(row=33,column=3,sticky="w" ,padx=10,pady=15)
+
+
+def upload_imagep23(event):
+    
+    file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
+    if file_path:
+       
+        directory = os.path.join(os.getcwd(), 'assets', 'img')
+        if not os.path.exists(directory):
+            os.makedirs(directory)         
+        destination_path = os.path.join(directory, 'p13.png')
+        shutil.copy(file_path, destination_path)
+        entry_field.delete(0, tk.END)  
+        entry_field.insert(0, destination_path)
+        print(f"Image saved as: {destination_path}")
+        print(f"Image saved at: {destination_path}")
+
+entry_fieldp13 = tk.Entry(scrollable_container.scrollable_frame)
+entry_fieldp13.grid(row=33,column=7,padx=10,pady=15,sticky="w")
+entry_fieldp13.bind("<Double-Button-1>", upload_imagep23)
+lab57=tk.Label(scrollable_container.scrollable_frame,text="•  project image 23")
+lab57.grid(row=33,column=6,sticky="w" ,padx=10,pady=15)
+
+
+
+
+
+
+
+
+
+
+
+
+
+def upload_imagep31(event):
+    
+    file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
+    if file_path:
+       
+        directory = os.path.join(os.getcwd(), 'assets', 'img')
+        if not os.path.exists(directory):
+            os.makedirs(directory)         
+        destination_path = os.path.join(directory, 'p31.png')
+        shutil.copy(file_path, destination_path)
+        entry_field.delete(0, tk.END)  
+        entry_field.insert(0, destination_path)
+        print(f"Image saved as: {destination_path}")
+        print(f"Image saved at: {destination_path}")
+
+entry_fieldp31 = tk.Entry(scrollable_container.scrollable_frame)
+entry_fieldp31.grid(row=34,column=1,padx=10,pady=15,sticky="w")
+entry_fieldp31.bind("<Double-Button-1>", upload_imagep31)
+lab58=tk.Label(scrollable_container.scrollable_frame,text="•  project image 31")
+lab58.grid(row=34,column=0,sticky="w" ,padx=10,pady=15)
+
+
+
+
+
+
+def upload_imagep32(event):
+    
+    file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
+    if file_path:
+       
+        directory = os.path.join(os.getcwd(), 'assets', 'img')
+        if not os.path.exists(directory):
+            os.makedirs(directory)         
+        destination_path = os.path.join(directory, 'p32.png')
+        shutil.copy(file_path, destination_path)
+        entry_field.delete(0, tk.END)  
+        entry_field.insert(0, destination_path)
+        print(f"Image saved as: {destination_path}")
+        print(f"Image saved at: {destination_path}")
+
+entry_fieldp32 = tk.Entry(scrollable_container.scrollable_frame)
+entry_fieldp32.grid(row=34,column=4,padx=10,pady=15,sticky="w")
+entry_fieldp32.bind("<Double-Button-1>", upload_imagep32)
+lab59=tk.Label(scrollable_container.scrollable_frame,text="•  project image 32")
+lab59.grid(row=34,column=3,sticky="w" ,padx=10,pady=15)
+
+
+def upload_imagep33(event):
+    
+    file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
+    if file_path:
+       
+        directory = os.path.join(os.getcwd(), 'assets', 'img')
+        if not os.path.exists(directory):
+            os.makedirs(directory)         
+        destination_path = os.path.join(directory, 'p33.png')
+        shutil.copy(file_path, destination_path)
+        entry_field.delete(0, tk.END)  
+        entry_field.insert(0, destination_path)
+        print(f"Image saved as: {destination_path}")
+        print(f"Image saved at: {destination_path}")
+
+entry_fieldp33 = tk.Entry(scrollable_container.scrollable_frame)
+entry_fieldp33.grid(row=34,column=7,padx=10,pady=15,sticky="w")
+entry_fieldp33.bind("<Double-Button-1>", upload_imagep33)
+lab591=tk.Label(scrollable_container.scrollable_frame,text="•  project image 33")
+lab591.grid(row=34,column=6,sticky="w" ,padx=10,pady=15)
+
 
 #_______________________________________________________________________________________
 
@@ -826,7 +1048,7 @@ def gen():
     webbrowser.open(file_name)
 #___________________________________________________________________________________________
 btn=tk.Button(scrollable_container.scrollable_frame,text="Genrate",bg="#342E27",command=gen, fg="white")
-btn.grid(row=32, column=4,columnspan=2,sticky="nsew",pady=10)
+btn.grid(row=37, column=4,columnspan=2,sticky="nsew",pady=10)
 
 
 
