@@ -361,12 +361,12 @@ cirtnames.grid(row=28,column=1,padx=10,pady=15)
 lab43=tk.Label(scrollable_container.scrollable_frame,text="•  Num of Certificates",padx=10,pady=15)
 lab43.grid(row=28,column=3,sticky="w")
 cirtnums=tk.Entry(scrollable_container.scrollable_frame)
-cirtnums.grid(row=28,column=4,padx=10,pady=15)
+cirtnums.grid(row=28,column=4,padx=10,pady=15 ,sticky="w")
 
 lab44=tk.Label(scrollable_container.scrollable_frame,text="•  Num of Languages ",padx=10,pady=15)
 lab44.grid(row=28,column=6,sticky="w")
 num_coding_langss=tk.Entry(scrollable_container.scrollable_frame)
-num_coding_langss.grid(row=28,column=7,padx=19,pady=15)
+num_coding_langss.grid(row=28,column=7,padx=10,pady=15)
 
 lab50=tk.Label(scrollable_container.scrollable_frame,text="•  Project Name 1 (if any)",padx=10,pady=15)
 lab50.grid(row=29,column=0,sticky="w")
@@ -537,7 +537,7 @@ def upload_imagep11(event):
 entry_fieldp11 = tk.Entry(scrollable_container.scrollable_frame)
 entry_fieldp11.grid(row=32,column=1,padx=10,pady=15,sticky="w")
 entry_fieldp11.bind("<Double-Button-1>", upload_imagep11)
-lab55=tk.Label(scrollable_container.scrollable_frame,text="•  project image 1")
+lab55=tk.Label(scrollable_container.scrollable_frame,text="•  First Project Image 1")
 lab55.grid(row=32,column=0,sticky="w" ,padx=10,pady=15)
 
 
@@ -563,7 +563,7 @@ def upload_imagep12(event):
 entry_fieldp12 = tk.Entry(scrollable_container.scrollable_frame)
 entry_fieldp12.grid(row=32,column=4,padx=10,pady=15,sticky="w")
 entry_fieldp12.bind("<Double-Button-1>", upload_imagep12)
-lab56=tk.Label(scrollable_container.scrollable_frame,text="•  project image 1")
+lab56=tk.Label(scrollable_container.scrollable_frame,text="•  First Project Image 2")
 lab56.grid(row=32,column=3,sticky="w" ,padx=10,pady=15)
 
 
@@ -588,7 +588,7 @@ def upload_imagep13(event):
 entry_fieldp13 = tk.Entry(scrollable_container.scrollable_frame)
 entry_fieldp13.grid(row=32,column=7,padx=10,pady=15,sticky="w")
 entry_fieldp13.bind("<Double-Button-1>", upload_imagep13)
-lab57=tk.Label(scrollable_container.scrollable_frame,text="•  project image 1")
+lab57=tk.Label(scrollable_container.scrollable_frame,text="•  First Project Image 3")
 lab57.grid(row=32,column=6,sticky="w" ,padx=10,pady=15)
 
 
@@ -612,7 +612,7 @@ def upload_imagep21(event):
 entry_fieldp12 = tk.Entry(scrollable_container.scrollable_frame)
 entry_fieldp12.grid(row=33,column=1,padx=10,pady=15,sticky="w")
 entry_fieldp12.bind("<Double-Button-1>", upload_imagep21)
-lab56=tk.Label(scrollable_container.scrollable_frame,text="•  project image 21")
+lab56=tk.Label(scrollable_container.scrollable_frame,text="•  Second Project Image 1")
 lab56.grid(row=33,column=0,sticky="w" ,padx=10,pady=15)
 
 
@@ -634,7 +634,7 @@ def upload_imagep22(event):
 entry_fieldp12 = tk.Entry(scrollable_container.scrollable_frame)
 entry_fieldp12.grid(row=33,column=4,padx=10,pady=15,sticky="w")
 entry_fieldp12.bind("<Double-Button-1>", upload_imagep22)
-lab56=tk.Label(scrollable_container.scrollable_frame,text="•  project image 22")
+lab56=tk.Label(scrollable_container.scrollable_frame,text="•  Second Project Image 2")
 lab56.grid(row=33,column=3,sticky="w" ,padx=10,pady=15)
 
 
@@ -656,7 +656,7 @@ def upload_imagep23(event):
 entry_fieldp13 = tk.Entry(scrollable_container.scrollable_frame)
 entry_fieldp13.grid(row=33,column=7,padx=10,pady=15,sticky="w")
 entry_fieldp13.bind("<Double-Button-1>", upload_imagep23)
-lab57=tk.Label(scrollable_container.scrollable_frame,text="•  project image 23")
+lab57=tk.Label(scrollable_container.scrollable_frame,text="•  Second Project Image 3")
 lab57.grid(row=33,column=6,sticky="w" ,padx=10,pady=15)
 
 
@@ -689,7 +689,7 @@ def upload_imagep31(event):
 entry_fieldp31 = tk.Entry(scrollable_container.scrollable_frame)
 entry_fieldp31.grid(row=34,column=1,padx=10,pady=15,sticky="w")
 entry_fieldp31.bind("<Double-Button-1>", upload_imagep31)
-lab58=tk.Label(scrollable_container.scrollable_frame,text="•  project image 31")
+lab58=tk.Label(scrollable_container.scrollable_frame,text="•  Third Project Image 1")
 lab58.grid(row=34,column=0,sticky="w" ,padx=10,pady=15)
 
 
@@ -715,7 +715,7 @@ def upload_imagep32(event):
 entry_fieldp32 = tk.Entry(scrollable_container.scrollable_frame)
 entry_fieldp32.grid(row=34,column=4,padx=10,pady=15,sticky="w")
 entry_fieldp32.bind("<Double-Button-1>", upload_imagep32)
-lab59=tk.Label(scrollable_container.scrollable_frame,text="•  project image 32")
+lab59=tk.Label(scrollable_container.scrollable_frame,text="•  Third Project Image 2")
 lab59.grid(row=34,column=3,sticky="w" ,padx=10,pady=15)
 
 
@@ -737,7 +737,7 @@ def upload_imagep33(event):
 entry_fieldp33 = tk.Entry(scrollable_container.scrollable_frame)
 entry_fieldp33.grid(row=34,column=7,padx=10,pady=15,sticky="w")
 entry_fieldp33.bind("<Double-Button-1>", upload_imagep33)
-lab591=tk.Label(scrollable_container.scrollable_frame,text="•  project image 33")
+lab591=tk.Label(scrollable_container.scrollable_frame,text="•  Third Project Image 3")
 lab591.grid(row=34,column=6,sticky="w" ,padx=10,pady=15)
 
 
