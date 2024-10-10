@@ -35,10 +35,10 @@ def create_labeled_entry(text, x, y, image_path):
     return entry  # Return the entry widget
 
 # Create labeled entries with background images for each field and store them in variables
-name_entry = create_labeled_entry("Name:", 50, 50, "assets/img/tempp.jpg")  # Field background
-email_entry = create_labeled_entry("Email:", 390, 50, "assets/img/tempp.jpg")  # Field background
-phone_entry = create_labeled_entry("Phone:", 50, 110, "assets/img/tempp.jpg")  # Field background
-phone_entry2 = create_labeled_entry("Pho2ne:", 390, 110, "assets/img/tempp.jpg")  # Field background
+name_entry = create_labeled_entry("Name:", 100, 50, "assets/img/tempp.jpg")  # Field background
+email_entry = create_labeled_entry("Email:", 440, 50, "assets/img/tempp.jpg")  # Field background
+phone_entry = create_labeled_entry("Phone:", 780, 50, "assets/img/tempp.jpg")  # Field background
+phone_entry2 = create_labeled_entry("Pho2ne:", 100, 110, "assets/img/tempp.jpg")  # Field background
 
 # Function to retrieve and print the entered values
 def print_values():
