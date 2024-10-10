@@ -36,14 +36,16 @@ def create_labeled_entry(text, x, y, image_path):
 
 # Create labeled entries with background images for each field and store them in variables
 name_entry = create_labeled_entry("Name:", 50, 50, "assets/img/tempp.jpg")  # Field background
-email_entry = create_labeled_entry("Email:", 50, 100, "assets/img/tempp.jpg")  # Field background
-phone_entry = create_labeled_entry("Phone:", 50, 150, "assets/img/tempp.jpg")  # Field background
+email_entry = create_labeled_entry("Email:", 390, 50, "assets/img/tempp.jpg")  # Field background
+phone_entry = create_labeled_entry("Phone:", 50, 110, "assets/img/tempp.jpg")  # Field background
+phone_entry2 = create_labeled_entry("Pho2ne:", 390, 110, "assets/img/tempp.jpg")  # Field background
 
 # Function to retrieve and print the entered values
 def print_values():
     name_value = name_entry.get()  # Get value from Name entry
     email_value = email_entry.get()  # Get value from Email entry
     phone_value = phone_entry.get()  # Get value from Phone entry
+    phone_value2 = phone_entry2.get()  # Get value from Phone entry
     
     print(f"Name: {name_value}, Email: {email_value}, Phone: {phone_value}")
 
