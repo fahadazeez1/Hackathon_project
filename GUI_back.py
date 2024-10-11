@@ -38,7 +38,9 @@ def create_labeled_entry(text, x, y, image_path):
 name_entry = create_labeled_entry("Name:", 100, 50, "assets/img/tempp.jpg")  # Field background
 email_entry = create_labeled_entry("Email:", 440, 50, "assets/img/tempp.jpg")  # Field background
 phone_entry = create_labeled_entry("Phone:", 780, 50, "assets/img/tempp.jpg")  # Field background
-phone_entry2 = create_labeled_entry("Pho2ne:", 100, 110, "assets/img/tempp.jpg")  # Field background
+phone_entry2 = create_labeled_entry("Dob:", 100, 110, "assets/img/tempp.jpg")  # Field background
+phone_entry2 = create_labeled_entry("Address:", 440, 110, "assets/img/tempp.jpg")  # Field background
+phone_entry2 = create_labeled_entry("Hobbies:", 780, 110, "assets/img/tempp.jpg")  # Field background
 
 # Function to retrieve and print the entered values
 def print_values():
