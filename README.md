@@ -17,4 +17,4 @@ Portfolio Craft Studio is a user-friendly tool that helps individuals create cus
 ## How to Run the Project
 1. Clone this repository.
    ```bash
-   git clone https://github.com/yourusername/portfolio-craft-studio.git
+   https://github.com/fahadazeez1/Hackathon_project.git
