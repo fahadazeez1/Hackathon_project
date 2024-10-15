@@ -1,20 +1,21 @@
-#Portfolio Craft Studio
+# Portfolio Craft Studio
 
-Portfolio Craft Studio is a user-friendly tool that helps individuals create customized, professional portfolios with ease. Users can enter their personal details, skills, and project information, which are then automatically populated into a beautifully designed template. The project uses Python for dynamic input generation and Tkinter for a simple graphical interface.
+Portfolio Craft Studio is an interactive tool that allows users to create a professional portfolio by filling in a simple form. It uses a **Python backend** to collect user details and injects them into a **HTML, CSS, JavaScript** template, which is styled with **Bootstrap** for responsiveness and a clean design.
 
 ## Features
-- Input form for personal details, skills, projects, and more.
-- Auto-population of templates based on user inputs.
-- Customizable design elements and layouts.
-- Exportable final portfolio in various formats.
-- Simple and intuitive UI using Tkinter.
+- Input form for personal details, skills, and projects.
+- Auto-population of an HTML template with the provided user data.
+- Responsive design using Bootstrap for a professional and mobile-friendly portfolio.
+- Simple user interface with **Tkinter** for easy data input.
+- Exportable portfolio in HTML format for personal or professional use.
 
 ## Technologies Used
-- **Python**: For input handling and template population.
-- **Tkinter**: For creating the graphical user interface.
-- **Jinja2**: For template rendering (optional based on template).
-  
+- **Python**: Backend logic for data collection and template population.
+- **HTML, CSS, JavaScript**: Portfolio template design.
+- **Bootstrap**: For responsive design.
+- **Tkinter**: Used for building the GUI for user input.
+
 ## How to Run the Project
-1. Clone this repository.
+1. Clone this repository:
    ```bash
-   https://github.com/fahadazeez1/Hackathon_project.git
+   git clone https://github.com/fahadazeez1/Hackathon_project.git
